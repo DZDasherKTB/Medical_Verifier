@@ -1,3 +1,4 @@
 key
 myenv/
 .env
+**/__pycache__/
