@@ -1,4 +1,4 @@
-# run_verification_pipeline.py
+# verification_pipeline.py
 
 import pandas as pd
 import json
@@ -21,11 +21,8 @@ def extract_qid_number(qid):
         return match.group(1)
 
     return None
-# =====================================
-# LOAD EXCEL
-# =====================================
 
-EXCEL_PATH = "data/manual_data/manually_extracted_propositions_51_100.xlsx"
+EXCEL_PATH = "data/manual_data/manually_extracted_propositions_1_50.xlsx"
 
 hypothesis_df = pd.read_excel(
     EXCEL_PATH,
@@ -41,12 +38,6 @@ reasoning_df = pd.read_excel(
     EXCEL_PATH,
     sheet_name="Reasoning"
 )
-
-
-# =====================================
-# FIX MERGED CELLS / EMPTY qn_ids
-# =====================================
-# Normalize IDs
 
 hypothesis_df["qid_num"] = (
     hypothesis_df["qn_id"]
@@ -64,34 +55,18 @@ reasoning_df["qid_num"] = (
 )
 
 
-# =====================================
-# INIT VERIFIERS
-# =====================================
-
 reasoning_verifier = ReasoningVerifier()
 proposition_verifier = PropositionVerifier()
 
 
-# =====================================
-# STORAGE
-# =====================================
-
 results = []
 
-
-# =====================================
-# PROCESS QUESTION BY QUESTION
-# =====================================
 
 unique_qns = hypothesis_df["qn_id"].unique()
 
 for qn_id in unique_qns:
 
     print(f"\nProcessing {qn_id}")
-
-    # ---------------------------------
-    # GET REASONING TRACE
-    # ---------------------------------
 
     reasoning_rows = reasoning_df[
         reasoning_df["qn_id"] == qn_id
@@ -104,10 +79,6 @@ for qn_id in unique_qns:
     reasoning_trace = str(
         reasoning_rows.iloc[0]["reasoning_trace"]
     )
-
-    # ---------------------------------
-    # GET ALL HYPOTHESES
-    # ---------------------------------
 
     hyp_rows = hypothesis_df[
         hypothesis_df["qn_id"] == qn_id
@@ -128,10 +99,6 @@ for qn_id in unique_qns:
 
         gt_answers[hyp_id] = row["answer"]
 
-    # ---------------------------------
-    # GET ALL PROPOSITIONS
-    # ---------------------------------
-
     prop_rows = proposition_df[
         proposition_df["ReH"] == qn_id
     ]
@@ -149,27 +116,15 @@ for qn_id in unique_qns:
 
     propositions = "\n".join(proposition_lines)
 
-    # =================================
-    # RUN REASONING VERIFIER
-    # =================================
-
     reasoning_result = reasoning_verifier.verify(
         reasoning_trace=reasoning_trace,
         hypotheses=hypotheses
     )
 
-    # =================================
-    # RUN PROPOSITION VERIFIER
-    # =================================
-
     proposition_result = proposition_verifier.verify(
         propositions=propositions,
         hypotheses=hypotheses
     )
-
-    # =================================
-    # STORE RESULTS
-    # =================================
 
     for hyp in hypotheses:
 
@@ -196,10 +151,6 @@ for qn_id in unique_qns:
             "ground_truth":
                 gt_answers.get(hyp_id),
 
-            # -------------------------
-            # Reasoning verifier
-            # -------------------------
-
             "reasoning_label":
                 reasoning_output.get("label"),
 
@@ -210,10 +161,6 @@ for qn_id in unique_qns:
                         []
                     )
                 ),
-
-            # -------------------------
-            # Proposition verifier
-            # -------------------------
 
             "proposition_label":
                 proposition_output.get("label"),
@@ -228,11 +175,6 @@ for qn_id in unique_qns:
         })
 
     print(f"Done {qn_id}")
-
-
-# =====================================
-# SAVE OUTPUT
-# =====================================
 
 results_df = pd.DataFrame(results)
 
