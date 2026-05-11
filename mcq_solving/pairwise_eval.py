@@ -65,13 +65,6 @@ def find_correct_letter(answer_text, options_dict):
         if option_clean == answer_clean:
             return letter
 
-        # containment match
-        if answer_clean in option_clean:
-            return letter
-
-        if option_clean in answer_clean:
-            return letter
-
     return None
 
 
@@ -92,7 +85,7 @@ rows = []
 # MAIN EVALUATION LOOP
 # =========================
 
-for idx in tqdm(range(7)):
+for idx in tqdm(range(30)):
 
     sample = train_data[idx]
 
