@@ -11,14 +11,14 @@ class ReasoningVerifier:
 
     def __init__(
         self,
-        model: str = "llama-3.3-70b-versatile",
-        api_key_env: str = "GROQ_API_KEY_2"
+        model: str = "meta-llama/llama-3.3-70b-instruct",
+        api_key_env: str = "OPENROUTER_API_KEY"
     ):
         load_dotenv()
 
         self.client = OpenAI(
             api_key=os.getenv(api_key_env),
-            base_url="https://api.groq.com/openai/v1"
+            base_url="https://openrouter.ai/api/v1"
         )
 
         self.model = model

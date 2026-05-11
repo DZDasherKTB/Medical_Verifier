@@ -43,6 +43,41 @@ def parse_options(options_text: str):
 
     return parsed
 
+def clean_text(text):
+    """
+    Normalize text for robust comparison.
+    """
+
+    text = text.lower()
+
+    # remove explanation section
+    text = text.split("explanation:")[0]
+
+    # remove punctuation
+    text = re.sub(r"[^\w\s]", "", text)
+
+    # normalize spaces
+    text = re.sub(r"\s+", " ", text)
+
+    return text.strip()
+
+
+def find_correct_letter(answer_text, options_dict):
+    """
+    Match answer text to the correct MCQ option letter.
+    """
+
+    answer_clean = clean_text(answer_text)
+
+    for letter, option in options_dict.items():
+
+        option_clean = clean_text(option)
+
+        # exact match
+        if option_clean == answer_clean:
+            return letter
+
+    return None
 
 # Load dataset
 dataset = load_dataset("UCSC-VLAA/MedReason")
@@ -68,14 +103,14 @@ for idx in tqdm(range(30)):
 
         question = sample["question"]
 
-        ground_truth_answer = sample["answer"]
-
-        ground_truth_reasoning = sample["reasoning"]
-
         raw_options = sample["options"]
-
+        
         # Parse options
         options_dict = parse_options(raw_options)
+        
+        ground_truth_answer = find_correct_letter(sample["answer"],options_dict)
+
+        ground_truth_reasoning = sample["reasoning"]
 
         # Store per-option outputs
         option_outputs = {}
@@ -219,7 +254,7 @@ df = pd.DataFrame(rows)
 
 
 # Save Excel
-output_file = "medreason_optionwise_outputs_1_50.xlsx"
+output_file = "~/Medical_Verifier/mcq_solving/independent_outputs.xlsx"
 
 df.to_excel(
     output_file,
