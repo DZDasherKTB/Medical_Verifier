@@ -69,13 +69,15 @@ rows = []
 # MAIN EVALUATION LOOP
 # =========================
 
-for idx in tqdm(range(30)):
+for idx in tqdm(range(1000)):
     sample = train_data[idx]
 
     try:
         dataset_id = sample["id_in_dataset"]
         question = sample["question"]
-        answer_text = sample["answer"]
+        raw_answer = sample["answer"]
+
+        answer_text = raw_answer.split("Explanation:")[0].strip()
         options_text = sample["options"]
         
         options_dict = parse_options(options_text)
