@@ -4,8 +4,11 @@ from indipendent_option_verification import ReasoningVerifier
 import pandas as pd
 import json
 import re
+import os
 
 from tqdm import tqdm
+
+from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
 
 
 def parse_options(options_text: str):
@@ -43,6 +46,7 @@ def parse_options(options_text: str):
 
     return parsed
 
+
 def clean_text(text):
     """
     Normalize text for robust comparison.
@@ -73,11 +77,28 @@ def find_correct_letter(answer_text, options_dict):
 
         option_clean = clean_text(option)
 
-        # exact match
-        if option_clean == answer_clean:
+        # robust match
+        if (
+            option_clean == answer_clean
+            or option_clean in answer_clean
+            or answer_clean in option_clean
+        ):
             return letter
 
     return None
+
+
+def clean_excel_text(value):
+    """
+    Remove illegal Excel characters.
+    """
+
+    if isinstance(value, str):
+
+        value = ILLEGAL_CHARACTERS_RE.sub("", value)
+
+    return value
+
 
 # Load dataset
 dataset = load_dataset("UCSC-VLAA/MedReason")
@@ -92,8 +113,21 @@ verifier = ReasoningVerifier()
 rows = []
 
 
-# Process first 30 samples
-for idx in tqdm(range(30)):
+# Output path
+output_file = (
+    "MCQ_Verification_Results/"
+    "indipendent_option_verification_results.xlsx"
+)
+
+# Create directory if missing
+os.makedirs(
+    os.path.dirname(output_file),
+    exist_ok=True
+)
+
+
+# Process first n samples
+for idx in tqdm(range(1000)):
 
     sample = train_data[idx]
 
@@ -104,11 +138,14 @@ for idx in tqdm(range(30)):
         question = sample["question"]
 
         raw_options = sample["options"]
-        
+
         # Parse options
         options_dict = parse_options(raw_options)
-        
-        ground_truth_answer = find_correct_letter(sample["answer"],options_dict)
+
+        ground_truth_answer_letter = find_correct_letter(
+            sample["answer"],
+            options_dict
+        )
 
         ground_truth_reasoning = sample["reasoning"]
 
@@ -140,16 +177,19 @@ for idx in tqdm(range(30)):
 
             "question": question,
 
-            "ground_truth_answer": ground_truth_answer,
+            "ground_truth_answer_letter":
+                ground_truth_answer_letter,
 
-            "ground_truth_reasoning": ground_truth_reasoning,
+            "ground_truth_reasoning":
+                ground_truth_reasoning,
 
             "option_A": options_dict.get("A", ""),
             "option_B": options_dict.get("B", ""),
             "option_C": options_dict.get("C", ""),
             "option_D": options_dict.get("D", ""),
 
-            "predicted_yes_options": ", ".join(predicted_yes),
+            "predicted_yes_options":
+                ", ".join(predicted_yes),
 
             # A
             "A_label": option_outputs.get(
@@ -241,24 +281,32 @@ for idx in tqdm(range(30)):
         print(f"[ERROR] {e}")
 
         rows.append({
+
             "id_in_dataset": sample.get(
                 "id_in_dataset",
                 "unknown"
             ),
+
             "error": str(e)
         })
 
+    # SAVE AFTER EVERY SAMPLE
 
-# Create dataframe
-df = pd.DataFrame(rows)
+    try:
 
+        df = pd.DataFrame(rows)
 
-# Save Excel
-output_file = "~/Medical_Verifier/mcq_solving/independent_outputs.xlsx"
+        # Remove illegal Excel characters
+        df = df.applymap(clean_excel_text)
 
-df.to_excel(
-    output_file,
-    index=False
-)
+        df.to_excel(
+            output_file,
+            index=False
+        )
+
+    except Exception as save_error:
+
+        print(f"[SAVE ERROR] {save_error}")
+
 
 print(f"\nSaved to {output_file}")

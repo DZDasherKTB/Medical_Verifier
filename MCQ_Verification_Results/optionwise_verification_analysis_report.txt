@@ -1,0 +1,62 @@
+
+OPTION-LEVEL ANALYSIS
+----------------------------------------------------------------------
+Total verifier decisions: 4000
+TP: 885
+TN: 2704
+FP: 312
+FN: 99
+
+Binary Accuracy: 0.8972
+Precision: 0.7393
+Recall: 0.8994
+F1 Score: 0.8116
+Specificity: 0.8966
+False Positive Rate: 0.1034
+False Negative Rate: 0.1006
+
+False Positives: 312
+False Negatives: 99
+
+MCQ-LEVEL ANALYSIS
+----------------------------------------------------------------------
+Total MCQs: 1000
+Strict Correct: 705
+Relaxed Correct: 885
+Strict Accuracy: 70.50%
+Relaxed Accuracy: 88.50%
+
+YES OPTION DISTRIBUTION
+0 YES : 73
+1 YES : 725
+2 YES : 145
+3 YES : 46
+4 YES : 11
+
+PREDICTION TYPE DISTRIBUTION
+SINGLE: 725
+NONE: 73
+MULTI_2: 145
+MULTI_4: 11
+MULTI_3: 46
+
+OPTION YES DISTRIBUTION
+A: 369
+B: 322
+C: 280
+D: 226
+
+PER OPTION METRICS
+A -> Accuracy=0.8970, Precision=0.8022, Recall=0.9080, F1=0.8518
+B -> Accuracy=0.8890, Precision=0.7267, Recall=0.9105, F1=0.8083
+C -> Accuracy=0.8900, Precision=0.6821, Recall=0.9009, F1=0.7764
+D -> Accuracy=0.9130, Precision=0.7257, Recall=0.8677, F1=0.7904
+
+GROUND TRUTH DISTRIBUTION
+C: 212
+A: 326
+B: 257
+D: 189
+: 16
+
+======================================================================

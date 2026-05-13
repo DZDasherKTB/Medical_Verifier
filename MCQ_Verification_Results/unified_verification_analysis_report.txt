@@ -1,0 +1,48 @@
+============================================================
+MCQ VERIFICATION ANALYSIS REPORT
+============================================================
+
+Total Questions: 1000
+Correct Predictions: 932
+Wrong Predictions: 68
+Accuracy: 93.20%
+
+STRICT ACCURACY
+----------------------------------------
+(Exactly one YES prediction and correct)
+Strict Correct: 924
+Strict Accuracy: 92.40%
+
+YES OPTION DISTRIBUTION
+----------------------------------------
+0 YES options: 1
+1 YES option : 990
+2 YES options: 4
+3 YES options: 3
+4 YES options: 2
+
+MULTI-YES ANALYSIS
+----------------------------------------
+Multi-YES correct: 8
+Multi-YES wrong: 1
+
+OPTION YES COUNTS
+----------------------------------------
+A: 328
+B: 268
+C: 224
+D: 195
+
+GROUND TRUTH DISTRIBUTION
+----------------------------------------
+C: 216
+A: 327
+B: 265
+D: 192
+
+PER OPTION METRICS
+----------------------------------------
+A -> TP=304 | FP=24 | FN=23 | Precision=0.9268 | Recall=0.9297
+B -> TP=248 | FP=20 | FN=17 | Precision=0.9254 | Recall=0.9358
+C -> TP=202 | FP=22 | FN=14 | Precision=0.9018 | Recall=0.9352
+D -> TP=178 | FP=17 | FN=14 | Precision=0.9128 | Recall=0.9271

@@ -1,7 +1,7 @@
 # reasoning_verifier.py
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import AzureOpenAI
 import os
 import json
 import re
@@ -11,14 +11,15 @@ class ReasoningVerifier:
 
     def __init__(
         self,
-        model: str = "meta-llama/llama-3.3-70b-instruct",
-        api_key_env: str = "OPENROUTER_API_KEY"
+        model: str = "gpt-5.5",
+        api_key_env: str = "AZURE_OPENAI_API_KEY"
     ):
         load_dotenv()
 
-        self.client = OpenAI(
-            api_key=os.getenv(api_key_env),
-            base_url="https://openrouter.ai/api/v1"
+        self.client = AzureOpenAI(
+            api_version="2024-12-01-preview",
+            azure_endpoint="https://medverifier-iitjmu-resource.cognitiveservices.azure.com/",
+            api_key=os.getenv(api_key_env)
         )
 
         self.model = model
@@ -126,7 +127,6 @@ Output format:
 
         response = self.client.chat.completions.create(
             model=self.model,
-            temperature=0,
             response_format={"type": "json_object"},
             messages=[
                 {
