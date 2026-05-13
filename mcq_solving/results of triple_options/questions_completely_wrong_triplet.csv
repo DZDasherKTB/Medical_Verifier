@@ -1,0 +1,118 @@
+id,question,ground_truth_letter,ground_truth_text,vs_A_B_selected,vs_A_B_is_correct,vs_A_B_trace,vs_A_B_justification,vs_A_D_selected,vs_A_D_is_correct,vs_A_D_trace,vs_A_D_justification,vs_B_D_selected,vs_B_D_is_correct,vs_B_D_trace,vs_B_D_justification,vs_B_C_selected,vs_B_C_is_correct,vs_B_C_trace,vs_B_C_justification,vs_C_D_selected,vs_C_D_is_correct,vs_C_D_trace,vs_C_D_justification,vs_A_C_selected,vs_A_C_is_correct,vs_A_C_trace,vs_A_C_justification,total_correct,total_evals
+7134,Most sensitive test for H pylori is-,B,Biopsy urease test,,,,,D,0.0,"[
+  ""Compare test sensitivity for active H. pylori infection among the listed options."",
+  ""Biopsy urease test is invasive and can miss infection due to patchy bacterial distribution, so sensitivity is lower."",
+  ""Urea breath test has the highest sensitivity among these commonly used tests for active H. pylori infection.""
+]",Urea breath test is the most sensitive option for detecting active H. pylori infection.,,,,,,,,,D,0.0,"[
+  ""Biopsy urease test is useful but can miss infection due to patchy bacterial distribution or recent medication use."",
+  ""Serological testing may be sensitive but cannot reliably distinguish active from past infection."",
+  ""Urea breath test is the most sensitive noninvasive test among the listed options for active H. pylori infection.""
+]",Urea breath test has the highest sensitivity among the given options for active H. pylori infection.,A,0.0,"[
+  ""Urea breath test is often considered highly sensitive, but it is not among the provided options."",
+  ""Biopsy urease test is invasive and can have reduced sensitivity due to patchy colonization or recent PPI/antibiotic use."",
+  ""Fecal antigen testing has high sensitivity for active H. pylori infection and is more sensitive than the other listed options.""
+]",Fecal antigen test is the most sensitive among the listed tests for active H. pylori infection.,0.0,3
+7607,What could be the possible diagnosis as per the given X-ray?,A,Osgood schattler disease,,,,,,,,,B,0.0,"[
+  ""Osgood-Schlatter disease shows fragmentation/irregularity at the tibial tuberosity."",
+  ""Pellegrini-Stieda lesion shows calcification/ossification near the medial femoral condyle at the MCL origin."",
+  ""Segond fracture shows a small avulsion fragment from the lateral tibial plateau, typically associated with ACL injury.""
+]","The X-ray appearance is most consistent with Pellegrini-Stieda lesion, showing ossification near the medial femoral condyle.",B,0.0,"[
+  ""SLAP tear is primarily a labral injury diagnosed by MRI/arthroscopy, not a typical plain X-ray diagnosis."",
+  ""Osgood-Schlatter disease shows tibial tubercle fragmentation/irregularity in adolescents, but the named X-ray calcific lesion among the options is different."",
+  ""Pellegrini-Stieda lesion is ossification/calcification near the medial femoral condyle at the MCL origin, classically diagnosed on X-ray.""
+]",Pellegrini-Stieda lesion is a characteristic X-ray finding of calcification/ossification at the medial collateral ligament origin.,D,0.0,"[
+  ""SLAP tear is a shoulder labral injury and is not diagnosed on a plain knee X-ray."",
+  ""Osgood-Schlatter disease shows tibial tubercle fragmentation/prominence rather than a lateral tibial plateau avulsion."",
+  ""A small avulsion fragment from the lateral proximal tibia on X-ray is characteristic of a Segond fracture.""
+]",Segond fracture is the X-ray diagnosis suggested by a lateral proximal tibial avulsion fragment.,,,,,0.0,3
+7690,Bleeding time is not prolonged in-,D,Polycythemia,B,0.0,"[
+  ""Bleeding time reflects platelet number/function and von Willebrand factor-mediated platelet adhesion."",
+  ""Von Willebrand's disease prolongs bleeding time because platelet adhesion is impaired."",
+  ""Christmas disease is hemophilia B, a factor IX coagulation defect, so bleeding time remains normal.""
+]","Christmas disease affects coagulation factor IX, not platelet function, so bleeding time is not prolonged.",,,,,,,,,C,0.0,"[
+  ""Bleeding time reflects platelet number/function and vascular factors, not intrinsic coagulation factor defects."",
+  ""Haemophilia is a coagulation factor deficiency, so bleeding time remains normal."",
+  ""Polycythemia can be associated with platelet dysfunction and bleeding abnormalities.""
+]",Bleeding time is not prolonged in haemophilia because platelet function is normal.,,,,,C,0.0,"[
+  ""Bleeding time assesses platelet adhesion/aggregation and primary hemostasis."",
+  ""Von Willebrand disease impairs platelet adhesion, so bleeding time is prolonged."",
+  ""Hemophilia is a coagulation factor disorder affecting secondary hemostasis, so bleeding time is not prolonged.""
+]",Hemophilia has normal bleeding time because platelet function is intact.,0.0,3
+7772,FNAC is the IOC is given below thyroid conditions except,C,Anaplastic carcinoma,B,0.0,"[
+  ""FNAC is the investigation of choice for papillary thyroid carcinoma because it has characteristic cytological features."",
+  ""FNAC can also be used for anaplastic carcinoma and is commonly diagnostic in a rapidly enlarging thyroid mass."",
+  ""Medullary carcinoma is better evaluated by serum calcitonin and related markers, so it is the exception among the given options.""
+]",Medullary thyroid carcinoma is not primarily diagnosed by FNAC; serum calcitonin is more characteristic and useful.,D,0.0,"[
+  ""FNAC is the investigation of choice for evaluating most thyroid nodules and is diagnostic for papillary carcinoma."",
+  ""Anaplastic carcinoma of thyroid can also be diagnosed by FNAC, though core biopsy may be used when needed."",
+  ""Since FNAC is applicable to both listed thyroid cancers, there is no exception among them.""
+]","FNAC is used for both papillary and anaplastic thyroid carcinoma, so none of the listed conditions is an exception.",D,0.0,"[
+  ""FNAC is an appropriate initial diagnostic test for suspected anaplastic thyroid carcinoma."",
+  ""FNAC is also useful for diagnosing medullary thyroid carcinoma, often supported by calcitonin testing."",
+  ""Since both listed carcinoma options can be evaluated by FNAC, neither is an exception among the provided options.""
+]","FNAC is used for both anaplastic and medullary thyroid carcinoma, so the correct exception among the given options is none of the above.",,,,,,,,,,,,,0.0,3
+7978,Kit B given at subcentre –,C,Paracetamol,A,0.0,"[
+  ""Identify the subcentre drug kit classification being tested."",
+  ""In standard subcentre supplies, ORS and paracetamol are included in Kit A."",
+  ""Vitamin A is the item among the given options associated with Kit B.""
+]","Vitamin A is included in Kit B at the subcentre, whereas ORS and paracetamol are Kit A items.",A,0.0,"[
+  ""Kit B at subcentre refers to the RCH/subcentre drug kit component."",
+  ""Paracetamol and iron are generally included in routine drug/IFA supplies, not the key Kit B item asked here."",
+  ""Vitamin A solution is supplied through Kit B at the subcentre.""
+]",Vitamin A is the item supplied in Kit B at the subcentre.,B,0.0,"[
+  ""Identify the subcentre drug kit classification being tested."",
+  ""Paracetamol and iron tablets are not the distinguishing item for Kit B among the given options."",
+  ""ORS is included in Kit B at the subcentre level.""
+]",ORS is the correct item associated with Kit B at subcentres among the given options.,,,,,,,,,,,,,0.0,3
+8084,Comment on the site of damage for a patient exhibiting the following symptom?,B,Neocerebellum,,,,,A,0.0,"[
+  ""The symptom needed to localize the lesion is not provided in the question."",
+  ""Substantia nigra, neocerebellum, and ventromedial thalamus correspond to different clinical syndromes."",
+  ""Because the key symptom is missing, the site of damage cannot be medically determined from the provided information.""
+]",Insufficient clinical information is provided to determine the correct lesion site.,,,,,,,,,,0.0,"[
+  ""The symptom needed to localize the lesion is not provided in the question."",
+  ""Neocerebellum and archicerebellum lesions cause different clinical patterns, so they cannot be distinguished without the symptom."",
+  ""Therefore, none of the provided options can be medically verified as uniquely correct from the given information.""
+]",Insufficient clinical information to determine the site of damage.,,0.0,"[
+  ""The prompt does not include the actual symptom to be localized."",
+  ""Substantia nigra, neocerebellum, and archicerebellum correspond to different clinical syndromes."",
+  ""Without the symptom, exactly one medically correct site cannot be determined.""
+]",Insufficient information: the symptom is missing.,0.0,3
+8109,A 45 year old male had multiple hypoaesthetic mildly erythematous large plaques with elevated margins on trunk and extremities. His ulnar and lateral popliteal nerves on both sides were enlarged. The most probable diagnosis is –,D,Borderline lepromatous leprosy,B,0.0,"[
+  ""The presence of hypoaesthetic erythematous plaques indicates leprosy with significant sensory impairment."",
+  ""Large plaques with elevated margins are characteristic of borderline forms rather than lepromatous leprosy, which typically has diffuse, symmetric, poorly defined lesions."",
+  ""Bilateral enlargement of ulnar and lateral popliteal nerves supports a borderline-spectrum leprosy diagnosis.""
+]",Multiple hypoaesthetic erythematous plaques with elevated margins and enlarged peripheral nerves are most consistent with borderline leprosy.,,,,,,,,,C,0.0,"[
+  ""Large hypoaesthetic erythematous plaques with elevated margins indicate a tuberculoid-spectrum leprosy lesion."",
+  ""Borderline tuberculoid leprosy commonly presents with well-defined raised plaques and prominent nerve enlargement."",
+  ""Borderline lepromatous leprosy typically has more numerous, symmetric, less well-defined lesions with less marked sensory loss in individual plaques.""
+]",The combination of hypoaesthetic large plaques with raised margins and enlarged peripheral nerves is most consistent with borderline tuberculoid leprosy.,,,,,C,0.0,"[
+  ""The lesions are hypoaesthetic erythematous plaques, indicating leprosy with significant sensory impairment."",
+  ""Large plaques with elevated, well-defined margins are characteristic of borderline tuberculoid leprosy rather than lepromatous disease."",
+  ""Peripheral nerve enlargement supports tuberculoid/borderline tuberculoid spectrum disease, while lepromatous and borderline lepromatous lesions are typically more numerous, diffuse, and less sharply raised.""
+]",Large hypoaesthetic plaques with elevated margins and enlarged peripheral nerves are most consistent with borderline tuberculoid leprosy.,0.0,3
+8592,Which of the following medications essential for ameliorating the toxicity of pemetrexed:,A,Folinic acid and vitamin B6,,,,,,,,,B,0.0,"[
+  ""Pemetrexed is an antifolate chemotherapy agent associated with significant hematologic and gastrointestinal toxicity without vitamin supplementation."",
+  ""Standard toxicity reduction requires folic acid plus vitamin B12 supplementation."",
+  ""Dexamethasone may reduce rash but is not the essential vitamin supplementation regimen, and folinic acid/vitamin B6 is not the standard regimen.""
+]",Pemetrexed toxicity is ameliorated by folic acid and vitamin B12 supplementation.,B,0.0,"[
+  ""Pemetrexed is an antifolate chemotherapy agent whose toxicities are reduced by vitamin supplementation."",
+  ""Standard supplementation required with pemetrexed is folic acid plus vitamin B12."",
+  ""Option B matches the required supplementation, while the other options list incorrect vitamins.""
+]",Folic acid and vitamin B12 are essential to reduce pemetrexed toxicity.,D,0.0,"[
+  ""Pemetrexed toxicity is reduced by mandatory folate supplementation, classically with folic acid plus vitamin B12."",
+  ""Dexamethasone is also commonly given with pemetrexed to reduce cutaneous toxicity such as rash."",
+  ""Among the provided options, Option D is the only one containing folic acid and a clinically relevant toxicity-reducing co-medication.""
+]","Folic acid is required with pemetrexed, and dexamethasone is used to reduce pemetrexed-associated skin toxicity.",,,,,0.0,3
+8635,A five year old child presents with ballooning of prepuce after micturation. Examination of penis reveals prepucial adhesions which the following the best treatment,B,Circumcision,,,,,D,0.0,"[
+  ""Preputial adhesions and non-retractile foreskin are commonly physiological in a 5-year-old child."",
+  ""Ballooning of the prepuce during or after micturition alone is not an indication for circumcision or forced adhesiolysis if there is no pathological phimosis, recurrent infection, or urinary obstruction."",
+  ""Therefore the best initial treatment among the options is conservative management.""
+]",Physiological preputial adhesions with ballooning are usually managed conservatively unless complicated.,,,,,,,,,D,0.0,"[
+  ""Ballooning of the prepuce with micturition in a 5-year-old commonly reflects physiological phimosis/preputial adhesions."",
+  ""Physiological preputial adhesions usually resolve spontaneously and do not require circumcision or dorsal slit unless complicated by recurrent infection, scarring, or obstruction."",
+  ""Therefore the best option among those provided is conservative management.""
+]",Prepucial adhesions with ballooning in a young child are usually physiological and are managed conservatively.,A,0.0,"[
+  ""Ballooning of the prepuce after micturition in a 5-year-old with prepucial adhesions suggests physiological phimosis or adhesions rather than an indication for immediate circumcision."",
+  ""The appropriate treatment for symptomatic prepucial adhesions is adhesiolysis with gentle dilatation."",
+  ""Circumcision is reserved for pathological phimosis or recurrent complications, and dorsal slit is mainly used for emergency relief such as severe paraphimosis.""
+]",Prepucial adhesions causing ballooning are best treated by adhesiolysis and dilatation.,0.0,3

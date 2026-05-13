@@ -1,0 +1,886 @@
+id,question,ground_truth_letter,ground_truth_text,vs_A_B_selected,vs_A_B_is_correct,vs_A_B_trace,vs_A_B_justification,vs_A_D_selected,vs_A_D_is_correct,vs_A_D_trace,vs_A_D_justification,vs_B_D_selected,vs_B_D_is_correct,vs_B_D_trace,vs_B_D_justification,vs_B_C_selected,vs_B_C_is_correct,vs_B_C_trace,vs_B_C_justification,vs_C_D_selected,vs_C_D_is_correct,vs_C_D_trace,vs_C_D_justification,vs_A_C_selected,vs_A_C_is_correct,vs_A_C_trace,vs_A_C_justification,total_correct,total_evals
+7134,Most sensitive test for H pylori is-,B,Biopsy urease test,,,,,D,0.0,"[
+  ""Compare test sensitivity for active H. pylori infection among the listed options."",
+  ""Biopsy urease test is invasive and can miss infection due to patchy bacterial distribution, so sensitivity is lower."",
+  ""Urea breath test has the highest sensitivity among these commonly used tests for active H. pylori infection.""
+]",Urea breath test is the most sensitive option for detecting active H. pylori infection.,,,,,,,,,D,0.0,"[
+  ""Biopsy urease test is useful but can miss infection due to patchy bacterial distribution or recent medication use."",
+  ""Serological testing may be sensitive but cannot reliably distinguish active from past infection."",
+  ""Urea breath test is the most sensitive noninvasive test among the listed options for active H. pylori infection.""
+]",Urea breath test has the highest sensitivity among the given options for active H. pylori infection.,A,0.0,"[
+  ""Urea breath test is often considered highly sensitive, but it is not among the provided options."",
+  ""Biopsy urease test is invasive and can have reduced sensitivity due to patchy colonization or recent PPI/antibiotic use."",
+  ""Fecal antigen testing has high sensitivity for active H. pylori infection and is more sensitive than the other listed options.""
+]",Fecal antigen test is the most sensitive among the listed tests for active H. pylori infection.,0.0,3
+7188,Drug commonly used in t/t of endometriosis -,B,GnRH analogues,,,,,B,1.0,"[
+  ""Endometriosis is estrogen-dependent and treatment often aims to suppress ovarian estrogen production."",
+  ""GnRH analogues are commonly used because they downregulate pituitary gonadotropin release with continuous use, causing hypoestrogenism."",
+  ""LH and FSH are not used as treatment for endometriosis because they would stimulate ovarian function rather than suppress it.""
+]",GnRH analogues are commonly used to treat endometriosis by suppressing ovarian estrogen production.,,,,,,,,,B,1.0,"[
+  ""GnRH analogues are established medical therapy for endometriosis by suppressing ovarian estrogen production."",
+  ""MPA is a progestin that can be used, but among the listed options GnRH analogues are the standard commonly cited treatment."",
+  ""FSH is not used to treat endometriosis and would not suppress the disease.""
+]",GnRH analogues are commonly used medical treatment for endometriosis.,C,0.0,"[
+  ""Endometriosis is commonly treated medically with hormonal suppression."",
+  ""LH is not used as a treatment for endometriosis."",
+  ""MPA is a progestin commonly used for endometriosis treatment.""
+]",MPA is a commonly used progestin therapy for endometriosis.,2.0,3
+7223,Decreased vascularity of fibroid is seen with :,D,All,A,0.0,"[
+  ""GnRH agonists induce a hypoestrogenic state and are known to reduce fibroid size and vascularity, especially before surgery."",
+  ""Danazol may have some effect on fibroid size but is not classically associated with decreased fibroid vascularity as a key effect."",
+  ""Therefore, among the given options, GnRH agonist is the correct choice.""
+]",GnRH agonists decrease fibroid vascularity by inducing hypoestrogenism.,,,,,,,,,D,1.0,"[
+  ""Both danazol and mifepristone can reduce fibroid-related vascularity through hormonal suppression/modulation."",
+  ""Decreased fibroid vascularity is also a known effect of medical therapies used to shrink fibroids."",
+  ""Since the listed agents are included, the correct option is All.""
+]","Danazol and mifepristone are both associated with reduced fibroid vascularity, so All is correct.",,,,,D,1.0,"[
+  ""GnRH agonists reduce estrogen stimulation and decrease fibroid size and vascularity."",
+  ""Mifepristone can also reduce fibroid growth and vascularity through antiprogesterone effects."",
+  ""Since decreased vascularity is seen with both listed therapies, the option covering all is correct.""
+]",Both GnRH agonists and mifepristone can decrease fibroid vascularity.,2.0,3
+7293,"A 60 year old male presented to the emergency with breathlessness, facial swelling and dilated veins on the chest wall. The most common cause is:",D,Superior vena caval obstruction,B,0.0,"[
+  ""The symptoms of breathlessness, facial swelling, and dilated chest wall veins indicate superior vena cava syndrome."",
+  ""The question asks for the most common cause, not the name of the syndrome itself."",
+  ""The most common cause of superior vena cava obstruction is lung cancer, especially bronchogenic carcinoma.""
+]",Lung cancer is the most common cause of superior vena caval obstruction.,,,,,,,,,B,0.0,"[
+  ""The symptoms describe superior vena cava syndrome: breathlessness, facial swelling, and dilated chest wall veins."",
+  ""Superior vena caval obstruction is the syndrome/condition, not the most common underlying cause."",
+  ""The most common cause of superior vena cava syndrome is lung cancer.""
+]",Lung cancer is the most common underlying cause of superior vena caval obstruction.,,,,,D,1.0,"[
+  ""The symptoms of breathlessness, facial swelling, and dilated chest wall veins indicate impaired venous drainage from the upper body."",
+  ""This clinical picture is characteristic of superior vena caval obstruction."",
+  ""Among the provided options, thymoma and Hodgkin's lymphoma may cause mediastinal obstruction but are not the best answer to the presented syndrome.""
+]",The presentation is classic for superior vena caval obstruction.,1.0,3
+7306,Early diagnosis of acute hepatitis-B infection is made by-,C,Presence HbsAg in serum,B,0.0,"[
+  ""HBsAg appears early but can be present in both acute and chronic hepatitis B infection."",
+  ""HBeAg indicates active viral replication and infectivity, not specifically early acute diagnosis."",
+  ""IgM anti-HBc is the serologic marker most specific for acute or recent hepatitis B infection.""
+]",IgM anti-HBc is the best marker for diagnosing acute hepatitis B infection.,C,1.0,"[
+  ""HBsAg is the first serologic marker to appear in acute hepatitis B infection."",
+  ""HBeAg indicates active viral replication and high infectivity, but it is not the primary marker for early diagnosis."",
+  ""IgG anti-HBc indicates past or chronic infection, not early acute infection.""
+]",Early acute hepatitis B is diagnosed by the presence of HBsAg in serum.,C,1.0,"[
+  ""HBsAg is the earliest routinely detectable serologic marker in hepatitis B infection, appearing before symptoms."",
+  ""IgM anti-HBc indicates acute or recent HBV infection but appears after HBsAg and is especially useful during the window period."",
+  ""IgG anti-HBc indicates past exposure or chronic infection, not early acute diagnosis.""
+]",HBsAg appears earliest in serum and is used for early diagnosis of hepatitis B infection.,,,,,,,,,,,,,2.0,3
+7319,Moth eaten bone is seen in which of the following ?,B,Multiple myeloma,,,,,B,1.0,"[
+  ""Osteoid osteoma typically shows a small radiolucent nidus with surrounding sclerosis, not a moth-eaten pattern."",
+  ""Chondromyxoid fibroma usually appears as an eccentric, expansile lytic lesion with a sclerotic margin, not moth-eaten bone destruction."",
+  ""Multiple myeloma produces multiple destructive osteolytic lesions and can show a moth-eaten appearance among the listed options.""
+]",Multiple myeloma is associated with destructive osteolytic bone lesions that may have a moth-eaten appearance.,,,,,,,,,C,0.0,"[
+  ""Moth-eaten bone destruction refers to an ill-defined, aggressive lytic pattern."",
+  ""Multiple myeloma classically shows multiple well-defined punched-out lesions rather than a moth-eaten pattern."",
+  ""Eosinophilic granuloma can produce irregular/moth-eaten osteolytic bone destruction, especially in jaws/skull.""
+]",Eosinophilic granuloma is associated with moth-eaten osteolytic bone destruction.,C,0.0,"[
+  ""Osteoid osteoma classically shows a small radiolucent nidus with surrounding sclerosis, not a moth-eaten pattern."",
+  ""Multiple myeloma classically produces multiple punched-out lytic lesions rather than a moth-eaten appearance."",
+  ""Eosinophilic granuloma can produce irregular destructive bone lesions described as moth-eaten.""
+]",Moth-eaten bone destruction is associated with eosinophilic granuloma among the given options.,1.0,3
+7375,Pressure volume loop is shifted to left side in,C,Aortic stenosis,B,0.0,"[
+  ""Aortic regurgitation causes volume overload with increased end-diastolic volume, so the loop shifts mainly to the right."",
+  ""Aortic stenosis causes increased afterload with increased systolic pressure and often increased end-systolic volume, not a left-shifted loop."",
+  ""Mitral regurgitation reduces effective afterload because blood can eject into the low-pressure left atrium, decreasing end-systolic volume and shifting the loop leftward.""
+]",Mitral regurgitation is associated with reduced end-systolic volume and a leftward shift of the pressure-volume loop.,C,1.0,"[
+  ""Aortic regurgitation causes volume overload with increased end-diastolic volume, shifting the pressure-volume loop to the right."",
+  ""Congestive cardiac failure typically causes increased end-systolic and end-diastolic volumes, also shifting the loop to the right."",
+  ""Aortic stenosis causes pressure overload with concentric hypertrophy and reduced ventricular compliance, which can shift the pressure-volume relationship leftward.""
+]","Aortic stenosis is associated with pressure overload and reduced LV compliance, producing a leftward shift compared with the rightward shifts seen in aortic regurgitation and congestive heart failure.",B,0.0,"[
+  ""Aortic stenosis increases afterload, raising systolic pressure and increasing end-systolic volume, so the loop is not shifted left."",
+  ""Mitral regurgitation allows ejection into the low-pressure left atrium, reducing effective afterload and decreasing end-systolic volume, causing a leftward shift of the end-systolic point."",
+  ""Congestive cardiac failure with reduced contractility shifts the loop to the right due to increased end-systolic and end-diastolic volumes.""
+]","Mitral regurgitation decreases effective afterload and end-systolic volume, producing a leftward shift of the pressure-volume loop.",,,,,,,,,,,,,1.0,3
+7409,Which of the following is RNA with catalytic activity?,D,All of the above,D,1.0,"[
+  ""Ribonuclease P is a ribozyme, meaning its RNA component has catalytic activity."",
+  ""Peptidyl transferase activity is catalyzed by ribosomal RNA in the large ribosomal subunit."",
+  ""Since both listed examples are RNA-associated catalytic activities, the best option is All of the above.""
+]",Both ribonuclease P and peptidyl transferase involve catalytic RNA activity.,,,,,,,,,D,1.0,"[
+  ""Peptidyl transferase activity is catalyzed by ribosomal RNA, making it an example of catalytic RNA."",
+  ""Small nuclear RNA participates in spliceosomal catalysis, so it is also associated with catalytic RNA activity."",
+  ""Since the listed examples represent RNA with catalytic activity, the inclusive option is correct.""
+]","Peptidyl transferase rRNA and snRNA-mediated spliceosomal catalysis are examples of catalytic RNA, so all listed choices apply.",,,,,A,0.0,"[
+  ""Ribonuclease P contains catalytic RNA and is a classic ribozyme."",
+  ""snRNA participates in spliceosome function but is not the best standalone answer for catalytic RNA in this context."",
+  ""Therefore, among the provided options, Ribonuclease P is the correct choice.""
+]",Ribonuclease P is a catalytic RNA enzyme (ribozyme).,2.0,3
+7417,Drug used for Buerger's disease,B,Xanthinol nicotinate,,,,,B,1.0,"[
+  ""Buerger's disease involves inflammatory occlusive disease of small and medium arteries, and management includes smoking cessation and vasodilator/hemorheologic agents for symptomatic relief."",
+  ""Xanthinol nicotinate is a vasodilator used in peripheral vascular disease and can be used in Buerger's disease."",
+  ""Propranolol may worsen peripheral vasoconstriction, so 'All the above' is incorrect.""
+]",Xanthinol nicotinate is the appropriate drug among the given options for Buerger's disease.,,,,,,,,,D,0.0,"[
+  ""Buerger's disease is treated primarily by smoking cessation, but vasodilators may be used symptomatically."",
+  ""Xanthinol nicotinate is a peripheral vasodilator used in peripheral vascular diseases including Buerger's disease."",
+  ""GTN can also be used as a vasodilator, so among the given options the inclusive option is correct.""
+]",Both xanthinol nicotinate and GTN are vasodilators used in Buerger's disease.,B,1.0,"[
+  ""Buerger's disease is a peripheral vascular occlusive disease where vasodilator therapy may be used as adjunctive treatment."",
+  ""Xanthinol nicotinate is a peripheral vasodilator used in peripheral vascular diseases including Buerger's disease."",
+  ""Propranolol can worsen peripheral ischemia, and GTN is not the standard drug choice for Buerger's disease among these options.""
+]",Xanthinol nicotinate is used as a peripheral vasodilator in Buerger's disease.,2.0,3
+7467,Best way to confirm that no stones are left back in the CBD?,C,Cholangiogram,A,0.0,"[
+  ""Choledochoscopy allows direct visualization of the common bile duct lumen."",
+  ""Direct visualization is more reliable than palpation and generally better than cholangiography for confirming duct clearance."",
+  ""Therefore the best option to confirm no retained CBD stones is choledochoscope.""
+]",Choledochoscopy directly visualizes the CBD and best confirms absence of retained stones.,A,0.0,"[
+  ""The aim is to confirm complete clearance of the common bile duct after suspected or treated CBD stones."",
+  ""A cholangiogram can show filling defects but may miss small retained stones, while ERCP is invasive and not the best confirmatory method in this setting."",
+  ""Choledochoscopy allows direct visualization of the CBD lumen and is the most reliable option among those listed.""
+]",Choledochoscopy directly visualizes the CBD and best confirms that no stones are left behind.,C,1.0,"[
+  ""Assess the goal: confirming complete clearance of the common bile duct after possible stone removal."",
+  ""Palpation can miss residual CBD stones and is not the best confirmatory method."",
+  ""A cholangiogram directly images the biliary tree and is the best option among those listed to confirm no stones remain.""
+]",Cholangiogram is the best method to confirm CBD clearance and exclude retained stones.,,,,,,,,,,,,,1.0,3
+7487,Most common site of metastasis for Breast Carcinoma is,D,Lumbar veebra,A,0.0,"[
+  ""Breast carcinoma commonly metastasizes to bone via hematogenous spread."",
+  ""Within bone metastases, the vertebral column is a very common site due to venous plexus spread."",
+  ""Among the listed sites, thoracic vertebrae are the most common site.""
+]",Thoracic vertebrae are the most common listed site for breast carcinoma bone metastasis.,,,,,,,,,D,1.0,"[
+  ""Breast carcinoma commonly metastasizes to bone, especially the axial skeleton."",
+  ""Among skeletal sites, vertebrae are more commonly involved than pelvis or femur."",
+  ""Therefore, among the given options, lumbar vertebra is the best answer.""
+]",Breast carcinoma most commonly metastasizes to the vertebral column among the listed skeletal sites.,,,,,A,0.0,"[
+  ""Breast carcinoma most commonly gives distant metastases to bone."",
+  ""Within skeletal metastases, the axial skeleton, especially the vertebral column, is more common than femur."",
+  ""Among vertebral sites, thoracic vertebrae are the most common site listed.""
+]","Breast carcinoma commonly metastasizes to bone, particularly the thoracic vertebrae among the given options.",1.0,3
+7510,Which of the following is best suited for detection of calculi in the submandibular gland?,A,Lower true occlusal,,,,,,,,,A,1.0,"[
+  ""Submandibular gland/Wharton duct calculi are best demonstrated with mandibular occlusal radiography of the floor of the mouth."",
+  ""The lower true occlusal view provides a cross-sectional projection suitable for detecting radiopaque sialoliths in the submandibular duct/gland region."",
+  ""Lower topographic occlusal is mainly for anterior mandibular assessment, and vertex occlusal is not the preferred view for submandibular calculi.""
+]",Lower true occlusal view is best suited for detecting submandibular salivary calculi.,C,0.0,"[
+  ""Submandibular gland calculi are usually posterior/inferior and require a projection that shows the posterior floor-of-mouth/submandibular region."",
+  ""Lower topographic occlusal is mainly for the anterior mandible, so it is not best suited."",
+  ""Lower oblique occlusal is preferred for detecting submandibular gland calculi.""
+]",Lower oblique occlusal best demonstrates calculi in the submandibular gland region.,C,0.0,"[
+  ""Submandibular sialoliths may occur in the duct or within the gland."",
+  ""A lower true occlusal view is mainly useful for calculi in the anterior floor of mouth/Wharton's duct."",
+  ""A lower oblique occlusal view is better suited for visualizing calculi located in the submandibular gland region.""
+]",Lower oblique occlusal radiograph best demonstrates calculi in the submandibular gland region.,,,,,1.0,3
+7531,Which of the following is a definite indication for systemic steroids in rheumatoid ahritis?,D,Both 'a' & 'c',A,0.0,"[
+  ""Systemic steroids in rheumatoid arthritis are definitely indicated for severe extra-articular disease such as rheumatoid vasculitis."",
+  ""Mononeuritis multiplex in rheumatoid arthritis usually reflects vasculitic neuropathy and requires systemic corticosteroids."",
+  ""Carpal tunnel syndrome is not a definite indication for systemic steroids; it is usually managed with splinting, local steroid injection, or decompression.""
+]",Mononeuritis multiplex is a severe vasculitic manifestation of rheumatoid arthritis requiring systemic steroids.,,,,,,,,,D,1.0,"[
+  ""Systemic steroids in rheumatoid arthritis are definite indications mainly for serious extra-articular disease."",
+  ""Carpal tunnel syndrome is not a definite indication for systemic steroids; it is usually managed locally or surgically if needed."",
+  ""Lung involvement is a serious extra-articular manifestation, and if option a is another systemic manifestation, then both a and c is the best choice among the provided options.""
+]","Systemic steroids are indicated for serious extra-articular rheumatoid disease such as lung involvement, not isolated carpal tunnel syndrome.",,,,,D,1.0,"[
+  ""Mononeuritis multiplex in rheumatoid arthritis usually reflects rheumatoid vasculitis and is a definite indication for systemic corticosteroids."",
+  ""Clinically significant rheumatoid lung involvement can also require systemic corticosteroid therapy depending on the manifestation."",
+  ""Since both listed conditions are accepted indications among the provided options, the combined option is correct.""
+]",Both mononeuritis multiplex and significant lung involvement are definite indications for systemic steroids in rheumatoid arthritis.,2.0,3
+7588,Recurrent ischaemic events following thrombosis have been pathophysiologically linked to,C,Lipoprotein A,B,0.0,"[
+  ""Recurrent ischaemic events after an acute thrombotic coronary event are most directly related to ongoing thrombin generation and coagulation activation."",
+  ""Fibrinopeptide A is released when thrombin cleaves fibrinogen, so it is a marker of active thrombin-mediated thrombosis."",
+  ""Lipoprotein(a) is a chronic atherothrombotic risk factor and antibodies to thrombolytic agents relate to thrombolytic reactions/resistance, but neither best fits the immediate pathophysiologic link.""
+]","Fibrinopeptide A reflects ongoing thrombin activity, which is linked to recurrent ischaemic events after thrombosis.",C,1.0,"[
+  ""Lipoprotein(a) is structurally similar to plasminogen and can interfere with fibrinolysis."",
+  ""Impaired fibrinolysis promotes persistence or recurrence of thrombotic occlusion, increasing recurrent ischaemic events."",
+  ""Antibodies to thrombolytic agents and triglycerides are not the best established pathophysiologic link among the provided options.""
+]",Lipoprotein(a) has prothrombotic and antifibrinolytic effects linked to recurrent ischaemic events after thrombosis.,C,1.0,"[
+  ""Recurrent ischaemic events after a thrombotic episode are most strongly associated with prothrombotic/antifibrinolytic mechanisms."",
+  ""Lipoprotein(a) is structurally similar to plasminogen and can impair fibrinolysis, promoting thrombosis and recurrent ischaemic events."",
+  ""Fibrinopeptide A is mainly a marker of thrombin activity, and triglycerides are a general cardiovascular risk factor, but neither is the best pathophysiologic link here.""
+]",Lipoprotein(a) promotes thrombosis by interfering with fibrinolysis and is linked to recurrent ischaemic events.,,,,,,,,,,,,,2.0,3
+7607,What could be the possible diagnosis as per the given X-ray?,A,Osgood schattler disease,,,,,,,,,B,0.0,"[
+  ""Osgood-Schlatter disease shows fragmentation/irregularity at the tibial tuberosity."",
+  ""Pellegrini-Stieda lesion shows calcification/ossification near the medial femoral condyle at the MCL origin."",
+  ""Segond fracture shows a small avulsion fragment from the lateral tibial plateau, typically associated with ACL injury.""
+]","The X-ray appearance is most consistent with Pellegrini-Stieda lesion, showing ossification near the medial femoral condyle.",B,0.0,"[
+  ""SLAP tear is primarily a labral injury diagnosed by MRI/arthroscopy, not a typical plain X-ray diagnosis."",
+  ""Osgood-Schlatter disease shows tibial tubercle fragmentation/irregularity in adolescents, but the named X-ray calcific lesion among the options is different."",
+  ""Pellegrini-Stieda lesion is ossification/calcification near the medial femoral condyle at the MCL origin, classically diagnosed on X-ray.""
+]",Pellegrini-Stieda lesion is a characteristic X-ray finding of calcification/ossification at the medial collateral ligament origin.,D,0.0,"[
+  ""SLAP tear is a shoulder labral injury and is not diagnosed on a plain knee X-ray."",
+  ""Osgood-Schlatter disease shows tibial tubercle fragmentation/prominence rather than a lateral tibial plateau avulsion."",
+  ""A small avulsion fragment from the lateral proximal tibia on X-ray is characteristic of a Segond fracture.""
+]",Segond fracture is the X-ray diagnosis suggested by a lateral proximal tibial avulsion fragment.,,,,,0.0,3
+7618,"A female presented with long standing nasal obstruction. She also complaints about comments from her friends telling about foul smell coming from her nose which she could not recognise. On evaluation, atrophic rhinitis is diagnosed. What can be the etiology in this patient to develop secondary atrophic rhinitis?",A,Chronic sinusitis,,,,,,,,,B,0.0,"[
+  ""Atrophic rhinitis can be primary or secondary; primary causes include idiopathic factors such as hereditary predisposition."",
+  ""Secondary atrophic rhinitis occurs after identifiable mucosal damage, such as trauma, excessive surgery, radiation, or granulomatous disease."",
+  ""Among the given options, nasal trauma is the best recognized cause of secondary atrophic rhinitis.""
+]","Nasal trauma can damage nasal mucosa and turbinates, leading to secondary atrophic rhinitis.",B,0.0,"[
+  ""The clinical features are consistent with atrophic rhinitis with foul-smelling crusting and anosmia."",
+  ""Secondary atrophic rhinitis occurs due to acquired damage to nasal mucosa, commonly after surgery, radiation, granulomatous disease, or trauma."",
+  ""Among the options, nasal trauma is the appropriate recognized etiology for secondary atrophic rhinitis.""
+]","Nasal trauma can damage the nasal mucosa and turbinates, leading to secondary atrophic rhinitis.",A,1.0,"[
+  ""Atrophic rhinitis with foul smell and anosmia is consistent with ozena."",
+  ""Secondary atrophic rhinitis may occur due to chronic local nasal or sinus disease, surgery, trauma, irradiation, or granulomatous infections."",
+  ""Among the given options, chronic sinusitis is a recognized cause of secondary atrophic rhinitis, while hereditary factors suggest primary disease.""
+]",Chronic sinusitis can lead to secondary atrophic rhinitis.,,,,,1.0,3
+7627,The muscle of hand that contains a sesamoid bone is,D,Adductor pollicis,A,0.0,"[
+  ""Sesamoid bones of the thumb are associated with the metacarpophalangeal joint tendons."",
+  ""Flexor pollicis brevis is a thenar hand muscle whose tendon commonly contains a sesamoid bone."",
+  ""Flexor pollicis longus is not an intrinsic hand muscle, so the best correct option is flexor pollicis brevis.""
+]",Flexor pollicis brevis is the intrinsic hand muscle classically associated with a sesamoid bone in its tendon.,,,,,,,,,D,1.0,"[
+  ""Sesamoid bones of the thumb are commonly found at the metacarpophalangeal joint within tendons of muscles inserting there."",
+  ""Adductor pollicis is an intrinsic hand muscle associated with the ulnar sesamoid bone of the thumb."",
+  ""Flexor pollicis longus is not an intrinsic hand muscle, and opponens pollicis is not typically described as containing a sesamoid bone.""
+]",Adductor pollicis is associated with a sesamoid bone at the thumb metacarpophalangeal joint.,,,,,A,0.0,"[
+  ""Sesamoid bones of the thumb are associated with tendons at the metacarpophalangeal joint."",
+  ""Flexor pollicis brevis commonly has a sesamoid bone in its tendon of insertion."",
+  ""Opponens pollicis does not contain a sesamoid bone; among the provided options, the expected correct answer is flexor pollicis brevis.""
+]",Flexor pollicis brevis has a sesamoid bone in its tendon of insertion.,1.0,3
+7654,Most common abdominal mass in children:,C,Neuroblastoma,A,0.0,"[
+  ""The question asks for the most common abdominal mass, not specifically the most common abdominal tumor or malignancy."",
+  ""Hydronephrosis is a common non-neoplastic cause of abdominal mass in children, especially from the urinary tract."",
+  ""Wilms' tumor and neuroblastoma are important pediatric abdominal tumors, but they are not the most common abdominal mass overall among the given options.""
+]",Hydronephrosis is the most common abdominal mass among the listed options.,A,0.0,"[
+  ""Hydronephrosis is a common non-neoplastic abdominal mass in infants/children, especially from urinary tract obstruction."",
+  ""Neuroblastoma is the most common abdominal malignant tumor in children but not the most common abdominal mass overall among these options."",
+  ""Rhabdomyosarcoma is not the most common abdominal mass in children.""
+]",Hydronephrosis is the most common abdominal mass among the listed options.,C,1.0,"[
+  ""Assess the options as pediatric abdominal tumors/masses."",
+  ""Neuroblastoma is the most common extracranial solid tumor in children and commonly presents as an abdominal mass, often from the adrenal gland."",
+  ""Wilms tumor is the most common renal tumor in children, but among the listed options neuroblastoma is the most common abdominal mass.""
+]",Neuroblastoma is the most common extracranial solid tumor in children and commonly presents as an abdominal mass.,,,,,,,,,,,,,1.0,3
+7655,Healthworker-hand washing,A,Cleaning hands with spirit before and after examination of each patient,,,,,,,,,B,0.0,"[
+  ""Alcohol-based hand rub can be used for routine hand hygiene when hands are not visibly soiled, so the statement that it cannot replace hand washing is false."",
+  ""When hands are visibly contaminated with blood or body fluids, they must be washed with soap and water."",
+  ""Cleaning with spirit before and after every patient is not universally appropriate because visible contamination requires soap and water.""
+]",Visible blood contamination on hands should be removed by washing with soap and water.,B,0.0,"[
+  ""Alcohol-based hand rubs can be used for routine hand hygiene, but they are not appropriate when hands are visibly contaminated with blood or body fluids."",
+  ""Visible blood contamination on hands requires washing with soap and water to physically remove organic material."",
+  ""Using soap and Dettol only before surgery is not the standard surgical hand preparation method.""
+]",Visible blood on hands should be removed by washing with soap and water.,A,1.0,"[
+  ""Hand hygiene is required before and after examining each patient to prevent healthcare-associated infection."",
+  ""Alcohol-based hand rub/spirit is an accepted method for routine hand antisepsis when hands are not visibly soiled."",
+  ""Soap/Dettol only before surgery is too limited, and hand rub can often replace hand washing, so C and D are incorrect.""
+]",Cleaning hands with spirit before and after each patient examination reflects appropriate routine hand hygiene practice.,,,,,1.0,3
+7689,A 52 year old woman has long standing rheumatoid ahritis (RA) and is being treated with coicosteroids and nonsteroidal anti-inflammatory drugs (NSAIDs). Which of the following cardiac complications may arise in this clinical setting?,D,Restrictive cardiomyopathy,A,0.0,"[
+  ""Rheumatoid arthritis can have extra-articular cardiac involvement, most commonly pericarditis."",
+  ""Chronic or recurrent rheumatoid pericarditis can rarely progress to constrictive pericarditis."",
+  ""Dilated cardiomyopathy and restrictive cardiomyopathy are less directly characteristic complications in this setting compared with constrictive pericarditis.""
+]","Long-standing RA can cause chronic pericarditis, which may progress to constrictive pericarditis.",,,,,,,,,D,1.0,"[
+  ""Long-standing rheumatoid arthritis is a chronic inflammatory disease that can lead to secondary AA amyloidosis."",
+  ""Cardiac amyloid deposition classically causes impaired ventricular filling with a restrictive cardiomyopathy pattern."",
+  ""Dilated cardiomyopathy is not the typical RA-related complication, and hypersensitivity myocarditis is a drug reaction rather than the classic cardiac complication of longstanding RA.""
+]","Long-standing RA can cause secondary amyloidosis with cardiac involvement, leading to restrictive cardiomyopathy.",,,,,A,0.0,"[
+  ""Rheumatoid arthritis can involve the heart, most commonly through pericardial disease."",
+  ""Chronic rheumatoid pericarditis can rarely progress to fibrous scarring and constrictive pericarditis."",
+  ""Restrictive cardiomyopathy and hypersensitivity myocarditis are not the characteristic cardiac complication in this setting among the options.""
+]",Long-standing rheumatoid arthritis can cause chronic pericarditis that may progress to constrictive pericarditis.,1.0,3
+7690,Bleeding time is not prolonged in-,D,Polycythemia,B,0.0,"[
+  ""Bleeding time reflects platelet number/function and von Willebrand factor-mediated platelet adhesion."",
+  ""Von Willebrand's disease prolongs bleeding time because platelet adhesion is impaired."",
+  ""Christmas disease is hemophilia B, a factor IX coagulation defect, so bleeding time remains normal.""
+]","Christmas disease affects coagulation factor IX, not platelet function, so bleeding time is not prolonged.",,,,,,,,,C,0.0,"[
+  ""Bleeding time reflects platelet number/function and vascular factors, not intrinsic coagulation factor defects."",
+  ""Haemophilia is a coagulation factor deficiency, so bleeding time remains normal."",
+  ""Polycythemia can be associated with platelet dysfunction and bleeding abnormalities.""
+]",Bleeding time is not prolonged in haemophilia because platelet function is normal.,,,,,C,0.0,"[
+  ""Bleeding time assesses platelet adhesion/aggregation and primary hemostasis."",
+  ""Von Willebrand disease impairs platelet adhesion, so bleeding time is prolonged."",
+  ""Hemophilia is a coagulation factor disorder affecting secondary hemostasis, so bleeding time is not prolonged.""
+]",Hemophilia has normal bleeding time because platelet function is intact.,0.0,3
+7762,Most common causative organism for bacterial meningitis beyond 3 years of age is -,A,Pneumococcus,,,,,,,,,A,1.0,"[
+  ""Beyond 3 years of age, Haemophilus influenzae type b is less common, especially compared with its typical peak in younger children."",
+  ""Staphylococcus aureus is not a usual common cause of community-acquired bacterial meningitis in this age group; it is more associated with trauma, neurosurgery, or shunts."",
+  ""Among the provided options, Streptococcus pneumoniae is the most common causative organism for bacterial meningitis beyond 3 years of age.""
+]",Pneumococcus is the most common option listed for bacterial meningitis beyond 3 years of age.,C,0.0,"[
+  ""Bacterial meningitis causative organisms vary with age."",
+  ""Beyond about 3 years of age, Neisseria meningitidis becomes a leading common cause compared with Staphylococcus aureus."",
+  ""Among the given options, meningococcus is the most appropriate answer.""
+]",Neisseria meningitidis is the most common listed cause of bacterial meningitis beyond 3 years of age.,C,0.0,"[
+  ""H. influenzae type b is classically most common in younger children, especially below about 3 years in unimmunized populations."",
+  ""Beyond 3 years of age, meningococcal meningitis becomes the commonest among the listed pediatric causes in traditional age-based classification."",
+  ""Pneumococcus is important across ages but is not the expected most common answer for bacterial meningitis beyond 3 years in this classification.""
+]","Beyond 3 years of age, the most common causative organism among the options is meningococcus.",,,,,1.0,3
+7772,FNAC is the IOC is given below thyroid conditions except,C,Anaplastic carcinoma,B,0.0,"[
+  ""FNAC is the investigation of choice for papillary thyroid carcinoma because it has characteristic cytological features."",
+  ""FNAC can also be used for anaplastic carcinoma and is commonly diagnostic in a rapidly enlarging thyroid mass."",
+  ""Medullary carcinoma is better evaluated by serum calcitonin and related markers, so it is the exception among the given options.""
+]",Medullary thyroid carcinoma is not primarily diagnosed by FNAC; serum calcitonin is more characteristic and useful.,D,0.0,"[
+  ""FNAC is the investigation of choice for evaluating most thyroid nodules and is diagnostic for papillary carcinoma."",
+  ""Anaplastic carcinoma of thyroid can also be diagnosed by FNAC, though core biopsy may be used when needed."",
+  ""Since FNAC is applicable to both listed thyroid cancers, there is no exception among them.""
+]","FNAC is used for both papillary and anaplastic thyroid carcinoma, so none of the listed conditions is an exception.",D,0.0,"[
+  ""FNAC is an appropriate initial diagnostic test for suspected anaplastic thyroid carcinoma."",
+  ""FNAC is also useful for diagnosing medullary thyroid carcinoma, often supported by calcitonin testing."",
+  ""Since both listed carcinoma options can be evaluated by FNAC, neither is an exception among the provided options.""
+]","FNAC is used for both anaplastic and medullary thyroid carcinoma, so the correct exception among the given options is none of the above.",,,,,,,,,,,,,0.0,3
+7791,In chronic alcoholics which the following enzymes are inhibited-,A,Glycogen phosphorylase kinase,,,,,,,,,A,1.0,"[
+  ""Chronic ethanol metabolism increases hepatic NADH and impairs hepatic glucose production, especially during fasting."",
+  ""Among the listed options, alcohol is associated with impaired glycogenolysis through inhibition of phosphorylase kinase activity."",
+  ""Phosphofructokinase and alcohol dehydrogenase are not the characteristic inhibited enzymes in chronic alcoholism.""
+]",Glycogen phosphorylase kinase inhibition can impair glycogenolysis in alcoholics; the other listed enzymes are not characteristically inhibited.,C,0.0,"[
+  ""Alcohol metabolism increases the hepatic NADH/NAD+ ratio."",
+  ""High NADH shifts the lactate dehydrogenase reaction toward lactate and inhibits conversion of lactate to pyruvate, impairing gluconeogenesis."",
+  ""Among the given options, lactate dehydrogenase is the enzyme functionally inhibited in this context.""
+]","In chronic alcohol use, excess NADH inhibits lactate-to-pyruvate conversion by lactate dehydrogenase, contributing to lactic acidosis and impaired gluconeogenesis.",C,0.0,"[
+  ""Chronic alcohol metabolism increases hepatic NADH/NAD+ ratio."",
+  ""High NADH shifts lactate dehydrogenase equilibrium toward lactate and impairs conversion of lactate to pyruvate."",
+  ""Among the given options, lactate dehydrogenase is the enzyme functionally inhibited in this context.""
+]","Chronic alcohol use raises NADH, inhibiting the lactate-to-pyruvate direction of lactate dehydrogenase and impairing gluconeogenesis.",,,,,1.0,3
+7853,patient having inguinal mass likely diagnosis ?,A,anal ca.,,,,,,,,,D,0.0,"[
+  ""Inguinal masses often represent enlarged inguinal lymph nodes."",
+  ""Penile cancer commonly metastasizes first to superficial and deep inguinal lymph nodes."",
+  ""Prostate cancer typically spreads to pelvic lymph nodes, while anal cancer can involve inguinal nodes but is less classically associated than penile cancer.""
+]","Penile carcinoma commonly presents with or metastasizes to inguinal lymph nodes, causing an inguinal mass.",A,1.0,"[
+  ""An inguinal mass in this context most likely represents inguinal lymphadenopathy."",
+  ""Anal canal cancers, especially distal anal cancers, commonly spread to inguinal lymph nodes."",
+  ""Prostate cancer typically spreads to pelvic nodes, and testicular cancer usually spreads to para-aortic nodes rather than inguinal nodes.""
+]",Anal cancer is the option most classically associated with inguinal lymph node involvement presenting as an inguinal mass.,D,0.0,"[
+  ""Inguinal masses in this context most likely represent enlarged inguinal lymph nodes."",
+  ""Penile cancer commonly spreads first to superficial and deep inguinal lymph nodes."",
+  ""Testicular cancer usually drains to para-aortic nodes, and anal cancer can involve inguinal nodes but is less directly suggested than penile cancer.""
+]","Penile carcinoma characteristically metastasizes to inguinal lymph nodes, presenting as an inguinal mass.",,,,,1.0,3
+7857,Life span of mosquito is?,B,2 weeks,,,,,B,1.0,"[
+  ""Mosquito lifespan varies by species and sex, but adult mosquitoes commonly live around 1 to 2 weeks under typical conditions."",
+  ""One week is usually more typical of male mosquitoes and is shorter than the common general estimate."",
+  ""One year is far too long for the usual adult mosquito lifespan, making 2 weeks the best option.""
+]",The usual general lifespan of a mosquito is about 2 weeks.,,,,,,,,,B,1.0,"[
+  ""Mosquito adult lifespan varies by species and conditions, but it is typically measured in weeks, not a year."",
+  ""Among the given options, 1 year is medically incorrect and 1 month is possible in some circumstances but is not the usual average."",
+  ""The commonly accepted average lifespan for mosquitoes in standard medical entomology questions is about 2 weeks.""
+]",Mosquitoes generally live for about 2 weeks on average.,C,0.0,"[
+  ""Mosquito lifespan varies by species, sex, and environmental conditions."",
+  ""Male mosquitoes often live about 1 week, while females generally live longer."",
+  ""Among the given options, 1 month best matches the commonly cited lifespan for adult female mosquitoes.""
+]","Female mosquitoes, which are medically important vectors, can live about 1 month.",2.0,3
+7869,"The primary lateral incisors begin to calcify about
+the:",C,41/2 month in utero,B,0.0,"[
+  ""Primary tooth calcification begins during intrauterine life, not after birth."",
+  ""Primary lateral incisors begin calcification at about 16 weeks in utero."",
+  ""Sixteen weeks corresponds to approximately the 4th month in utero.""
+]",Primary lateral incisors begin calcification around the 4th month in utero.,C,1.0,"[
+  ""Primary teeth begin calcification during intrauterine life, not after birth."",
+  ""Primary lateral incisors initiate calcification at approximately 4 to 4.5 months in utero."",
+  ""Among the provided options, 4.5 months in utero is the medically correct match.""
+]",Primary lateral incisors begin calcification about 4.5 months in utero.,B,0.0,"[
+  ""Primary tooth calcification begins in utero in a known sequence."",
+  ""Primary lateral incisors begin calcification at about 16 weeks in utero."",
+  ""Sixteen weeks corresponds to approximately the 4th month in utero.""
+]","Primary lateral incisors begin calcification at about 16 weeks, i.e., the 4th month in utero.",,,,,,,,,,,,,1.0,3
+7893,Causes of exudative retinal detachment,C,Harada's syndrome,C,1.0,"[
+  ""Identify exudative retinal detachment as serous retinal detachment due to fluid accumulation without a retinal break or traction."",
+  ""Harada's syndrome, part of Vogt-Koyanagi-Harada disease, is a classic cause of bilateral exudative retinal detachment."",
+  ""Central retinal artery disease is not a cause of exudative retinal detachment, and hypertensive retinopathy is less specifically correct than Harada's syndrome in this option set.""
+]",Harada's syndrome classically causes exudative serous retinal detachment.,C,1.0,"[
+  ""Exudative retinal detachment occurs due to subretinal fluid accumulation without a retinal break, often from inflammatory or choroidal disorders."",
+  ""Harada's syndrome is a recognized inflammatory cause of exudative retinal detachment."",
+  ""The listed Option A is not a standard cause as written, so 'All' cannot be correct.""
+]",Harada's syndrome is a known cause of exudative retinal detachment.,D,0.0,"[
+  ""Exudative retinal detachment occurs due to fluid accumulation under the retina without a retinal break."",
+  ""Harada's syndrome is a recognized cause of exudative retinal detachment."",
+  ""Severe hypertensive retinopathy can also cause exudative retinal detachment, so the option including all listed causes is correct.""
+]",Both Harada's syndrome and hypertensive retinopathy can cause exudative retinal detachment.,,,,,,,,,,,,,2.0,3
+7901,"High environmental temperature, best step for malaria control-",A,Remove breeding place,,,,,,,,,A,1.0,"[
+  ""Malaria is transmitted by Anopheles mosquitoes, so controlling mosquito breeding reduces transmission."",
+  ""High environmental temperature can favor mosquito survival and parasite development, making vector control important."",
+  ""Among the options, removing breeding places is the most direct malaria control measure.""
+]",Removing mosquito breeding sites is the best control step because it reduces the Anopheles vector population.,A,1.0,"[
+  ""Malaria control is most effective when mosquito breeding is prevented or reduced at the source."",
+  ""High environmental temperature can favor mosquito development if breeding sites are available, so eliminating stagnant water/breeding places reduces vector density."",
+  ""Full sleeve clothing is only personal protection, and indoor insecticide is less broadly preventive than source reduction.""
+]",Removing breeding places targets the mosquito life cycle at the source and is the best control measure among the options.,C,0.0,"[
+  ""High environmental temperature favors malaria transmission by accelerating mosquito and parasite development."",
+  ""Among the options, indoor residual insecticide directly kills adult Anopheles mosquitoes and interrupts transmission rapidly."",
+  ""Removing breeding places and early treatment are useful measures, but they are not the best single step here for immediate malaria vector control.""
+]",Indoor insecticide spraying is the most effective option to rapidly reduce adult Anopheles mosquitoes and interrupt malaria transmission.,,,,,2.0,3
+7933,Tongue anomaly is called as:,B,Bifid tongue,,,,,D,0.0,"[
+  ""Fissured tongue is a recognized tongue anomaly."",
+  ""Bifid tongue is also a recognized tongue anomaly."",
+  ""Since the listed specific options are tongue anomalies, the inclusive option is correct.""
+]","Both fissured tongue and bifid tongue are tongue anomalies, so all of the above is correct.",,,,,,,,,D,0.0,"[
+  ""Bifid tongue is a congenital anomaly of the tongue."",
+  ""Macroglossia is an abnormal enlargement of the tongue and is also a tongue anomaly."",
+  ""Since both listed conditions are tongue anomalies, the inclusive option is correct.""
+]",Both bifid tongue and macroglossia are tongue anomalies.,B,1.0,"[
+  ""The phrase asks for a tongue anomaly rather than enlargement or surface fissuring."",
+  ""Macroglossia means an abnormally enlarged tongue, not specifically the named anomaly implied here."",
+  ""Bifid tongue is a congenital tongue anomaly involving splitting/clefting of the tongue.""
+]",Bifid tongue is a congenital tongue anomaly.,1.0,3
+7936,"A Bone marrow transplant receipient patient, developed chest infection. ON chest Xray Tree in Bud appearance is present. The cause of this is:",D,RSV,D,1.0,"[
+  ""Tree-in-bud appearance reflects bronchiolar inflammation/impaction, commonly seen with infectious bronchiolitis."",
+  ""In bone marrow transplant recipients, RSV is an important cause of lower respiratory tract infection and can produce bronchiolitis with tree-in-bud nodules."",
+  ""Pneumocystis typically causes diffuse ground-glass opacities, and Klebsiella more often causes lobar consolidation rather than tree-in-bud.""
+]","RSV causes infectious bronchiolitis in bone marrow transplant recipients, producing a tree-in-bud appearance.",,,,,,,,,C,0.0,"[
+  ""Tree-in-bud appearance indicates bronchiolar impaction and endobronchial spread of infection."",
+  ""Pneumocystis typically causes bilateral diffuse ground-glass opacities rather than tree-in-bud nodules."",
+  ""Tuberculosis is a classic cause of tree-in-bud appearance due to endobronchial spread.""
+]",TB classically causes a tree-in-bud pattern from endobronchial spread.,,,,,D,1.0,"[
+  ""Tree-in-bud opacities indicate small-airway/endobronchial bronchiolar infection or spread."",
+  ""Klebsiella typically causes lobar pneumonia with bulging fissure rather than tree-in-bud."",
+  ""In bone marrow transplant recipients, RSV commonly causes infectious bronchiolitis with tree-in-bud appearance.""
+]",RSV is a typical cause of bronchiolitis with tree-in-bud opacities in bone marrow transplant recipients.,2.0,3
+7960,Preservative added in DPT vaccine is :,B,Aluminum phosphate,,,,,B,1.0,"[
+  ""DPT vaccine formulations use aluminum salts as standard added components."",
+  ""Aluminum phosphate is the relevant listed additive associated with DPT vaccine."",
+  ""Zinc phosphate and zinc sulfate are not preservatives used in DPT vaccine.""
+]",Aluminum phosphate is the relevant added component among the listed options for DPT vaccine.,,,,,,,,,A,0.0,"[
+  ""DPT vaccine commonly contains thiomersal as a preservative."",
+  ""Aluminum phosphate is used as an adjuvant/adsorbent, not as a preservative."",
+  ""MgSO4 and ZnSO4 are not standard preservatives in DPT vaccine.""
+]",The preservative in DPT vaccine is thiomersal; none of the provided B/C/D options is the preservative.,B,1.0,"[
+  ""DPT vaccine commonly contains an aluminium salt such as aluminium phosphate as an added component."",
+  ""Zinc phosphate and magnesium sulfate are not standard preservatives/components used for DPT vaccine in this context."",
+  ""Among the given options, aluminum phosphate is the only medically relevant choice associated with DPT vaccine.""
+]",Aluminum phosphate is the relevant added component in DPT vaccine among the listed options.,2.0,3
+7963,The laboratory test of choice to confirm myxoedema coma is -,A,Thyroid stimulating hormone (TSH),,,,,,,,,D,0.0,"[
+  ""Myxoedema coma represents severe decompensated hypothyroidism and confirmation requires demonstrating markedly reduced thyroid hormone levels."",
+  ""TSH is usually elevated in primary hypothyroidism but can be low or inappropriately normal in central hypothyroidism, so it is not the most definitive single confirmatory test in all cases."",
+  ""TRH testing is not used acutely; low T4 directly confirms severe thyroid hormone deficiency.""
+]",Serum T4 is the best confirmatory laboratory test among the options because it directly demonstrates severe thyroid hormone deficiency in myxoedema coma.,A,1.0,"[
+  ""Myxoedema coma is a severe form of hypothyroidism and is usually confirmed biochemically by thyroid function testing."",
+  ""Among the given options, TSH is the most appropriate and sensitive test to support the diagnosis, typically showing marked elevation in primary hypothyroidism."",
+  ""TRH testing is rarely used, and T3 is not the test of choice because it may be low in many non-thyroidal illnesses and is less reliable.""
+]",TSH is the best available test among the options to confirm severe hypothyroidism causing myxoedema coma.,A,1.0,"[
+  ""Myxoedema coma is a severe form of hypothyroidism, most commonly due to primary thyroid failure."",
+  ""In primary hypothyroidism, TSH is the most sensitive screening and confirmatory laboratory marker, typically markedly elevated."",
+  ""T3 may be low in many illnesses and T4 is low in hypothyroidism, but TSH is the test of choice among the given options.""
+]",TSH is the preferred laboratory test to confirm primary hypothyroidism causing myxoedema coma.,,,,,2.0,3
+7968,"In Vitamin A deficiency, respiratory tract infection due to:",C,Dysfunction of epithelial layer,A,0.0,"[
+  ""Vitamin A is required for normal differentiation and maintenance of respiratory epithelium."",
+  ""Deficiency causes squamous metaplasia and keratinization of epithelial cells, impairing mucosal defense."",
+  ""This epithelial keratinization predisposes to respiratory tract infections; lack of antibody production is not the primary mechanism.""
+]","Vitamin A deficiency causes keratinization of respiratory epithelial cells, weakening mucosal defense and increasing respiratory infections.",C,1.0,"[
+  ""Vitamin A is required to maintain normal mucosal epithelial integrity in the respiratory tract."",
+  ""Deficiency causes epithelial dysfunction with squamous metaplasia/keratinization, impairing the protective mucosal barrier and predisposing to infection."",
+  ""Defective chemotaxis is not the characteristic mechanism for respiratory infection in vitamin A deficiency.""
+]",Respiratory infections in vitamin A deficiency occur primarily because of impaired/dysfunctional respiratory epithelial barrier.,C,1.0,"[
+  ""Vitamin A is essential for maintaining normal differentiation and integrity of respiratory epithelium."",
+  ""Deficiency causes keratinization and dysfunction of epithelial barriers, increasing susceptibility to respiratory infections."",
+  ""Lack of antibody production and defective chemotaxis are not the primary mechanisms in vitamin A deficiency.""
+]",Respiratory infections in vitamin A deficiency occur mainly due to dysfunction and loss of integrity of the epithelial layer.,,,,,,,,,,,,,2.0,3
+7978,Kit B given at subcentre –,C,Paracetamol,A,0.0,"[
+  ""Identify the subcentre drug kit classification being tested."",
+  ""In standard subcentre supplies, ORS and paracetamol are included in Kit A."",
+  ""Vitamin A is the item among the given options associated with Kit B.""
+]","Vitamin A is included in Kit B at the subcentre, whereas ORS and paracetamol are Kit A items.",A,0.0,"[
+  ""Kit B at subcentre refers to the RCH/subcentre drug kit component."",
+  ""Paracetamol and iron are generally included in routine drug/IFA supplies, not the key Kit B item asked here."",
+  ""Vitamin A solution is supplied through Kit B at the subcentre.""
+]",Vitamin A is the item supplied in Kit B at the subcentre.,B,0.0,"[
+  ""Identify the subcentre drug kit classification being tested."",
+  ""Paracetamol and iron tablets are not the distinguishing item for Kit B among the given options."",
+  ""ORS is included in Kit B at the subcentre level.""
+]",ORS is the correct item associated with Kit B at subcentres among the given options.,,,,,,,,,,,,,0.0,3
+7993,"39 years female, 40 weeks gestation, 4mm dilated cervix. Which is the safest option for analgesia-",B,Epidural block,,,,,B,1.0,"[
+  ""At 4 cm cervical dilatation, labor analgesia is appropriate and neuraxial analgesia can be initiated."",
+  ""Intramuscular pentazocin is less safe because systemic opioids cross the placenta and may cause maternal sedation and neonatal respiratory depression."",
+  ""Epidural block provides effective labor analgesia with minimal fetal drug exposure and is the safest option among the listed choices when properly monitored.""
+]","Epidural block is the safest and most effective labor analgesia option among these, with less neonatal respiratory depression than systemic opioids.",,,,,,,,,D,0.0,"[
+  ""At 40 weeks with 4 cm cervical dilatation, she is in the first stage of labor and needs labor analgesia."",
+  ""Pudendal block is mainly useful for second-stage perineal analgesia, not early first-stage labor pain."",
+  ""Premixed nitrous oxide and oxygen provides safe, controllable labor analgesia with minimal maternal and fetal risk compared with more invasive regional techniques.""
+]",Premixed nitrous oxide and oxygen is the safest option for first-stage labor analgesia among the given choices.,B,1.0,"[
+  ""At 4 cm cervical dilation, the patient is in active first-stage labor and needs labor analgesia appropriate for this stage."",
+  ""Intramuscular pentazocin can cross the placenta and may cause maternal sedation and neonatal respiratory depression, so it is less safe."",
+  ""Pudendal block is mainly useful for second-stage perineal analgesia, while epidural provides effective and safe labor analgesia throughout active labor.""
+]",Epidural block is the safest and most effective option for analgesia in active labor at 4 cm dilation.,2.0,3
+8019,"""Doughnut"" sign is seen in",C,CHPS,A,0.0,"[
+  ""The doughnut/target sign refers to concentric rings seen on transverse imaging."",
+  ""This is classically associated with intussusception on ultrasound."",
+  ""Carcinoma colon is classically associated with apple-core lesion, not doughnut sign.""
+]",Doughnut sign is classically seen in intussusception.,A,0.0,"[
+  ""The doughnut sign describes concentric bowel wall layers on imaging."",
+  ""This is classically associated with intussusception, also called the target sign."",
+  ""Volvulus is associated with whirlpool/bird-beak signs, not the doughnut sign.""
+]",The doughnut/target sign is classically seen in intussusception.,C,1.0,"[
+  ""The doughnut sign refers to a target-like appearance on ultrasound."",
+  ""In congenital hypertrophic pyloric stenosis, the thickened pyloric muscle around the canal produces this doughnut/target sign."",
+  ""Carcinoma colon is classically associated with apple-core sign, and volvulus with coffee-bean or bird-beak signs.""
+]",CHPS shows the doughnut/target sign on ultrasound due to hypertrophied pyloric muscle.,,,,,,,,,,,,,1.0,3
+8021,"A symmetric high-voltage, triphasic slow wave pattern is seen on EEG in the following",A,Hepatic encephalopathy,,,,,,,,,D,0.0,"[
+  ""Triphasic high-voltage generalized slow waves are classically associated with metabolic encephalopathies."",
+  ""They are seen in hepatic encephalopathy and can also occur in uremic encephalopathy."",
+  ""Since both listed conditions can show this EEG pattern, the inclusive option is correct.""
+]",Triphasic generalized slow waves occur in both hepatic and uremic encephalopathy.,A,1.0,"[
+  ""Triphasic waves on EEG are classically generalized, symmetric, high-voltage slow wave complexes."",
+  ""They are most strongly associated with metabolic encephalopathies, especially hepatic encephalopathy."",
+  ""Among the given options, hepatic encephalopathy is the classic answer.""
+]",Symmetric high-voltage triphasic slow waves on EEG are classically seen in hepatic encephalopathy.,A,1.0,"[
+  ""Triphasic high-voltage slow waves on EEG are classically associated with metabolic encephalopathy, especially hepatic encephalopathy."",
+  ""Hypoxic encephalopathy more typically shows diffuse slowing, burst-suppression, alpha coma, or suppression patterns rather than the classic triphasic wave pattern."",
+  ""Therefore, among the provided options, hepatic encephalopathy is the best correct answer.""
+]",Symmetric high-voltage triphasic slow waves are classically seen in hepatic encephalopathy.,,,,,2.0,3
+8038,Most common intra abdominal solid organ tumor in child is-,A,Neuroblastoma,,,,,,,,,A,1.0,"[
+  ""Neuroblastoma is the most common extracranial solid tumor in children and commonly arises in the abdomen from the adrenal gland or sympathetic chain."",
+  ""Rhabdomyoblastoma/rhabdomyosarcoma is a pediatric soft tissue tumor but is not the most common intra-abdominal solid organ tumor."",
+  ""Hypernephroma refers to renal cell carcinoma, which is primarily an adult tumor and is uncommon in children.""
+]",Neuroblastoma is the most common intra-abdominal solid tumor among the listed pediatric options.,C,0.0,"[
+  ""Neuroblastoma is the most common extracranial solid tumor in children, but not classically the most common intra-abdominal solid organ tumor."",
+  ""Rhabdomyoblastoma is not the typical most common intra-abdominal solid organ tumor in children."",
+  ""Wilms tumor is classically the most common intra-abdominal solid organ tumor of childhood.""
+]",Wilms tumor is the most common intra-abdominal solid organ tumor in children.,A,1.0,"[
+  ""Neuroblastoma is the most common extracranial solid tumor of childhood and commonly arises intra-abdominally, especially from the adrenal gland or sympathetic chain."",
+  ""Wilms tumor is the most common renal tumor in children but is not the most common intra-abdominal solid tumor overall."",
+  ""Hypernephroma is renal cell carcinoma and is rare in children.""
+]",Neuroblastoma is the most common intra-abdominal solid tumor in children among the listed options.,,,,,2.0,3
+8068,Treatment of choice of desmoids tumour is:,D,Surgery + Radiotherapy,A,0.0,"[
+  ""Desmoid tumors are locally aggressive but non-metastasizing soft tissue tumors."",
+  ""When active treatment is required and the tumor is resectable, the standard definitive treatment is surgical excision with clear margins."",
+  ""Radiotherapy or chemotherapy is generally reserved for unresectable, recurrent, or margin-positive disease rather than being the primary treatment of choice.""
+]",Surgery with wide local excision is the treatment of choice for resectable desmoid tumor.,,,,,,,,,D,1.0,"[
+  ""Desmoid tumors are locally aggressive fibromatoses with no metastatic potential, and local control is the main treatment goal."",
+  ""Chemotherapy or radiotherapy alone is generally reserved for unresectable, recurrent, or selected nonoperative cases, not the standard preferred curative approach when resection is feasible."",
+  ""Among the given options, surgery combined with radiotherapy provides the best local control and is the most appropriate treatment choice.""
+]","Desmoid tumors are best managed with local control; among the options, surgery with radiotherapy is preferred over chemotherapy or radiotherapy alone.",,,,,A,0.0,"[
+  ""Desmoid tumors are locally aggressive but non-metastatic fibrous tumors."",
+  ""When active treatment is required, the standard treatment among the given options is surgical excision with clear margins."",
+  ""Radiotherapy is generally reserved for unresectable, recurrent, or margin-positive disease rather than being the primary treatment of choice.""
+]",Surgery is the treatment of choice among the provided options.,1.0,3
+8070,Vitamin B level in chronic myeloid leukemia is,A,Elevated',,,,,,,,,A,1.0,"[
+  ""Chronic myeloid leukemia is associated with increased granulocyte proliferation."",
+  ""Granulocytes release increased vitamin B12-binding proteins, causing serum vitamin B12 levels to rise."",
+  ""Among the provided options, the medically correct description is elevated.""
+]",Vitamin B12 level is elevated in chronic myeloid leukemia due to increased B12-binding proteins from proliferating granulocytes.,A,1.0,"[
+  ""Chronic myeloid leukemia causes marked granulocytic proliferation."",
+  ""Granulocytes produce increased vitamin B12-binding proteins such as transcobalamin, raising measured serum vitamin B12 levels."",
+  ""Therefore the vitamin B level in chronic myeloid leukemia is elevated.""
+]",Serum vitamin B12 is elevated in CML due to increased B12-binding proteins from proliferating granulocytes.,D,0.0,"[
+  ""Chronic myeloid leukemia causes marked granulocytic proliferation."",
+  ""Granulocytes increase vitamin B12-binding proteins, raising serum vitamin B12 levels."",
+  ""Thus the characteristic finding is a markedly elevated vitamin B12 level.""
+]",Serum vitamin B12 is characteristically markedly elevated in chronic myeloid leukemia.,,,,,2.0,3
+8084,Comment on the site of damage for a patient exhibiting the following symptom?,B,Neocerebellum,,,,,A,0.0,"[
+  ""The symptom needed to localize the lesion is not provided in the question."",
+  ""Substantia nigra, neocerebellum, and ventromedial thalamus correspond to different clinical syndromes."",
+  ""Because the key symptom is missing, the site of damage cannot be medically determined from the provided information.""
+]",Insufficient clinical information is provided to determine the correct lesion site.,,,,,,,,,,0.0,"[
+  ""The symptom needed to localize the lesion is not provided in the question."",
+  ""Neocerebellum and archicerebellum lesions cause different clinical patterns, so they cannot be distinguished without the symptom."",
+  ""Therefore, none of the provided options can be medically verified as uniquely correct from the given information.""
+]",Insufficient clinical information to determine the site of damage.,,0.0,"[
+  ""The prompt does not include the actual symptom to be localized."",
+  ""Substantia nigra, neocerebellum, and archicerebellum correspond to different clinical syndromes."",
+  ""Without the symptom, exactly one medically correct site cannot be determined.""
+]",Insufficient information: the symptom is missing.,0.0,3
+8109,A 45 year old male had multiple hypoaesthetic mildly erythematous large plaques with elevated margins on trunk and extremities. His ulnar and lateral popliteal nerves on both sides were enlarged. The most probable diagnosis is –,D,Borderline lepromatous leprosy,B,0.0,"[
+  ""The presence of hypoaesthetic erythematous plaques indicates leprosy with significant sensory impairment."",
+  ""Large plaques with elevated margins are characteristic of borderline forms rather than lepromatous leprosy, which typically has diffuse, symmetric, poorly defined lesions."",
+  ""Bilateral enlargement of ulnar and lateral popliteal nerves supports a borderline-spectrum leprosy diagnosis.""
+]",Multiple hypoaesthetic erythematous plaques with elevated margins and enlarged peripheral nerves are most consistent with borderline leprosy.,,,,,,,,,C,0.0,"[
+  ""Large hypoaesthetic erythematous plaques with elevated margins indicate a tuberculoid-spectrum leprosy lesion."",
+  ""Borderline tuberculoid leprosy commonly presents with well-defined raised plaques and prominent nerve enlargement."",
+  ""Borderline lepromatous leprosy typically has more numerous, symmetric, less well-defined lesions with less marked sensory loss in individual plaques.""
+]",The combination of hypoaesthetic large plaques with raised margins and enlarged peripheral nerves is most consistent with borderline tuberculoid leprosy.,,,,,C,0.0,"[
+  ""The lesions are hypoaesthetic erythematous plaques, indicating leprosy with significant sensory impairment."",
+  ""Large plaques with elevated, well-defined margins are characteristic of borderline tuberculoid leprosy rather than lepromatous disease."",
+  ""Peripheral nerve enlargement supports tuberculoid/borderline tuberculoid spectrum disease, while lepromatous and borderline lepromatous lesions are typically more numerous, diffuse, and less sharply raised.""
+]",Large hypoaesthetic plaques with elevated margins and enlarged peripheral nerves are most consistent with borderline tuberculoid leprosy.,0.0,3
+8119,Pagets disease increases the risk of,B,Osteosarcoma,,,,,B,1.0,"[
+  ""Paget disease of bone is associated with an increased risk of malignant transformation."",
+  ""The classic malignancy associated with Paget disease is osteosarcoma."",
+  ""Osteoma is not the characteristic increased risk, so 'All' is incorrect.""
+]",Paget disease increases the risk of osteosarcoma.,,,,,,,,,D,0.0,"[
+  ""Paget disease of bone can undergo malignant transformation, though this is uncommon."",
+  ""The most classically associated malignancy is osteosarcoma, but fibrosarcoma can also occur."",
+  ""Since both listed tumors are risks, the best option among the choices is All.""
+]","Paget disease increases the risk of sarcomatous transformation, especially osteosarcoma and also fibrosarcoma.",B,1.0,"[
+  ""Paget disease of bone is associated with an increased risk of malignant transformation."",
+  ""The most classically associated malignancy is osteosarcoma."",
+  ""Osteoma is not a typical complication, and fibrosarcoma is much less characteristic than osteosarcoma.""
+]",Paget disease of bone classically increases the risk of osteosarcoma.,2.0,3
+8137,Which of the following is the investigation of choice for assessment of depth of penetration and perirectal node involvement in rectal cancer?,A,MRI scan,,,,,,,,,D,0.0,"[
+  ""Rectal cancer local staging requires assessment of tumor penetration through the rectal wall and involvement of nearby perirectal nodes."",
+  ""CT pelvis is less accurate for detailed rectal wall layer assessment."",
+  ""Transrectal ultrasound is classically the investigation of choice for assessing depth of penetration and perirectal lymph node involvement.""
+]",Transrectal ultrasound best evaluates rectal wall invasion depth and perirectal nodes for local staging.,A,1.0,"[
+  ""Rectal cancer local staging requires assessment of tumor depth through the rectal wall and involvement of mesorectal or perirectal lymph nodes."",
+  ""Pelvic MRI is the preferred investigation for local staging because it accurately evaluates depth of invasion, mesorectal fascia involvement, and regional nodes."",
+  ""CT pelvis and double contrast barium enema are less accurate for detailed local rectal cancer staging.""
+]",MRI scan is the investigation of choice for assessing depth of penetration and perirectal nodal involvement in rectal cancer.,D,0.0,"[
+  ""Rectal cancer local staging requires assessment of tumor penetration through the rectal wall and nearby perirectal nodes."",
+  ""Double contrast barium enema is not useful for accurate local staging depth or nodal assessment."",
+  ""Transrectal ultrasound is classically the investigation of choice for assessing depth of penetration and perirectal lymph node involvement.""
+]",Transrectal ultrasound best assesses rectal wall invasion depth and perirectal nodes in rectal cancer staging.,,,,,1.0,3
+8154,Knee with leg x- ray of an adolescent boy is shown. Probable diagnosis:,A,Chondromyxoid fibroma,,,,,,,,,B,0.0,"[
+  ""Adolescent age group with a lesion around the knee strongly suggests a primary malignant bone tumor, especially osteosarcoma."",
+  ""Osteosarcoma classically occurs in the metaphysis of long bones around the knee, particularly distal femur or proximal tibia, and shows aggressive radiographic features."",
+  ""Chondromyxoid fibroma is usually a benign eccentric lytic lesion, and osteitis fibrosa cystica is related to hyperparathyroidism rather than a typical solitary aggressive adolescent knee lesion.""
+]",Osteosarcoma is the classic adolescent malignant bone tumor occurring around the knee.,B,0.0,"[
+  ""Adolescent age and lesion around the knee strongly fit osteosarcoma, which commonly arises in the metaphysis of the distal femur or proximal tibia."",
+  ""Osteosarcoma typically shows aggressive radiographic features such as mixed lytic-sclerotic destruction, periosteal reaction, Codman triangle, or sunburst appearance."",
+  ""Chondromyxoid fibroma and bone cyst with fracture are usually benign-appearing lytic lesions and are less likely if the knee x-ray shows an aggressive adolescent metaphyseal tumor.""
+]",Adolescent boy with an aggressive metaphyseal lesion around the knee is most consistent with osteosarcoma.,A,1.0,"[
+  ""The lesion location around the knee in an adolescent favors benign metaphyseal bone tumors."",
+  ""Chondromyxoid fibroma classically occurs in adolescents/young adults, most commonly in the proximal tibial metaphysis near the knee, as an eccentric lytic lesion."",
+  ""Bone cyst with fracture and osteitis fibrosa cystica are less consistent with the typical age-location pattern described.""
+]","Chondromyxoid fibroma typically presents in adolescents as an eccentric metaphyseal lytic lesion around the knee, especially the proximal tibia.",,,,,1.0,3
+8193,Best marker of SLE?,B,Anti-ds DNA antibodies,,,,,A,0.0,"[
+  ""Anti-Sm antibodies are highly specific for SLE and are considered the most specific serologic marker among the options."",
+  ""Anti-dsDNA antibodies are also specific and correlate with disease activity, especially lupus nephritis, but are not the best overall specific marker compared with Anti-Sm."",
+  ""Anti-Ro/SS-A antibodies are associated with SLE but are less specific and also seen in Sjogren syndrome and neonatal lupus.""
+]",Anti-Sm antibodies are the most specific marker for SLE among the listed options.,,,,,,,,,B,1.0,"[
+  ""Anti-dsDNA antibodies are highly specific for SLE and correlate with disease activity, especially lupus nephritis."",
+  ""Anti-histone antibodies are more characteristic of drug-induced lupus rather than the best marker of classic SLE."",
+  ""Anti-Ro/SS-A antibodies are associated with Sj\u00f6gren syndrome, subacute cutaneous lupus, and neonatal lupus, but are not the best overall marker of SLE.""
+]",Anti-dsDNA antibodies are the best marker among the options for SLE due to high specificity and correlation with disease activity.,A,0.0,"[
+  ""Anti-histone antibodies are most associated with drug-induced lupus, not the best marker of SLE."",
+  ""Anti-dsDNA antibodies are specific for SLE and correlate with disease activity, especially lupus nephritis."",
+  ""Anti-Sm antibodies are the most specific diagnostic marker for SLE among the options.""
+]",Anti-Sm antibodies are the most specific marker for SLE.,1.0,3
+8211,Organ most vulnerable to ischaemic due to shock?,D,Hea,D,1.0,"[
+  ""Shock causes systemic hypoperfusion leading to ischemic injury in organs with high oxygen demand."",
+  ""Among the listed options, the heart is highly vulnerable to ischemia because myocardium depends on continuous oxygen delivery."",
+  ""Lungs and adrenals can be affected in shock, but they are not the most ischemia-sensitive among these choices.""
+]",The heart is most vulnerable among the options due to high oxygen demand and limited tolerance of ischemia.,,,,,,,,,C,0.0,"[
+  ""Shock causes systemic hypoperfusion and ischemic injury to organs."",
+  ""The kidneys are especially vulnerable because renal blood flow falls markedly, leading to acute tubular necrosis."",
+  ""Among heart, adrenals, and kidney, the kidney is the classic organ most vulnerable to ischemic injury in shock.""
+]","Kidney is most vulnerable to ischemic injury in shock, classically causing acute tubular necrosis.",,,,,C,0.0,"[
+  ""Shock causes systemic hypoperfusion and ischemic injury in susceptible organs."",
+  ""Among the listed options, kidneys are especially vulnerable because renal tubular cells are highly sensitive to reduced perfusion, leading to acute tubular necrosis."",
+  ""Therefore, the correct option is Kidney.""
+]","Kidneys are highly susceptible to ischemic injury in shock, commonly causing acute tubular necrosis.",1.0,3
+8216,Injury to the nerve originating from C5 in Brachial plexus leads to,D,Winging of scapula,A,0.0,"[
+  ""C5 contributes to nerves such as the axillary nerve, which supplies the deltoid muscle."",
+  ""Deltoid paralysis causes loss or severe weakness of arm abduction, especially from 15 to 90 degrees."",
+  ""Winging of the scapula is classically due to long thoracic nerve injury, not an isolated C5-related abduction deficit.""
+]",C5-related axillary nerve injury causes loss of abduction of the arm.,,,,,,,,,D,1.0,"[
+  ""The nerve arising directly from the C5 root of the brachial plexus is the dorsal scapular nerve."",
+  ""The dorsal scapular nerve supplies the rhomboids, which stabilize and retract the scapula."",
+  ""Injury to this nerve can cause scapular winging; loss of arm abduction is mainly axillary/suprascapular nerve injury, and loss of shrugging is spinal accessory nerve injury.""
+]",C5 root injury involving the dorsal scapular nerve can cause winging of the scapula.,,,,,A,0.0,"[
+  ""C5 fibers in the brachial plexus contribute importantly to nerves supplying shoulder abductors, especially supraspinatus and deltoid."",
+  ""Injury affecting C5 commonly weakens or abolishes arm abduction at the shoulder."",
+  ""Winging of the scapula is classically due to long thoracic nerve injury, and loss of shrugging is mainly spinal accessory nerve injury.""
+]",C5 injury in the brachial plexus most characteristically causes loss of arm abduction due to weakness of supraspinatus and deltoid.,1.0,3
+8245,Lady with infeility with bilateral tubal block at cornua : best method of management is :,C,IVF,A,0.0,"[
+  ""Bilateral cornual tubal block is a proximal tubal obstruction and should first be confirmed/managed with endoscopic evaluation rather than blind hydrotubation."",
+  ""Laparoscopy with hysteroscopy allows direct pelvic assessment and evaluation of the uterine cornua/tubal ostia, with potential proximal tubal cannulation."",
+  ""IVF is an option for untreatable tubal disease, but among the given choices the best management for cornual block is laparoscopy and hysteroscopy.""
+]",Bilateral cornual block is best evaluated and potentially treated by laparoscopy with hysteroscopy; hydrotubation is obsolete and IVF is not first-line here.,C,1.0,"[
+  ""Bilateral cornual tubal block represents proximal tubal factor infertility."",
+  ""Tuboplasty has limited benefit for cornual/proximal bilateral block and is less favored than assisted reproduction."",
+  ""IVF bypasses the blocked tubes and is the best management among the given options.""
+]",IVF is preferred for bilateral tubal block because it bypasses tubal obstruction.,C,1.0,"[
+  ""Bilateral tubal blockage prevents natural fertilization by blocking oocyte-sperm transport."",
+  ""Hydrotubation is not reliable definitive treatment for true bilateral cornual tubal block."",
+  ""Tuboplasty/cannulation may be considered in selected proximal blocks, but among the listed options IVF is the best established management for bilateral tubal block.""
+]",IVF bypasses the blocked fallopian tubes and is the best option among those listed for bilateral tubal block.,,,,,,,,,,,,,2.0,3
+8260,Prolonged latent phase is seen in :,B,Unripe cervix,,,,,B,1.0,"[
+  ""Prolonged latent phase is an early labor abnormality commonly associated with an unfavorable or unripe cervix."",
+  ""Placenta praevia is associated with antepartum bleeding, not classically with prolonged latent phase."",
+  ""Excessive sedation can affect labor progress, but among the listed options the best classic association is unripe cervix.""
+]",Prolonged latent phase is classically associated with an unripe or unfavorable cervix.,,,,,,,,,D,0.0,"[
+  ""Prolonged latent phase is a labor abnormality associated with delayed cervical dilatation in early labor."",
+  ""Abruptio placenta is not a typical cause of prolonged latent phase."",
+  ""Excessive sedation can reduce uterine activity and is a recognized cause of prolonged latent phase.""
+]",Excessive sedation may depress uterine contractions and prolong the latent phase of labor.,B,1.0,"[
+  ""Prolonged latent phase refers to delayed early labor progress before active cervical dilatation."",
+  ""An unripe cervix is associated with slow cervical effacement and dilatation, causing prolongation of the latent phase."",
+  ""Placenta praevia and abruptio placenta are causes of antepartum hemorrhage, not typical causes of prolonged latent phase.""
+]",Prolonged latent phase is commonly associated with an unripe cervix.,2.0,3
+8345,"An 18-year-old girl presents with amenorrhoea, milk discharge, weight loss. Diagnosis is",A,Pituitary Cancer,,,,,,,,,A,1.0,"[
+  ""Amenorrhoea with milk discharge indicates galactorrhoea, most commonly due to hyperprolactinaemia."",
+  ""Hyperprolactinaemia is classically caused by a pituitary prolactin-secreting tumour rather than anorexia nervosa or simple hypothalamic amenorrhoea."",
+  ""Among the given options, the pituitary option best matches amenorrhoea with galactorrhoea.""
+]",Amenorrhoea with galactorrhoea suggests hyperprolactinaemia from a pituitary lesion.,A,1.0,"[
+  ""Amenorrhoea with milk discharge indicates galactorrhoea due to hyperprolactinaemia."",
+  ""Anorexia nervosa explains weight loss and amenorrhoea but not milk discharge."",
+  ""A pituitary prolactin-secreting lesion best explains amenorrhoea and galactorrhoea among the options.""
+]",Amenorrhoea plus galactorrhoea most strongly suggests a pituitary prolactin-secreting lesion.,C,0.0,"[
+  ""Amenorrhoea with milk discharge indicates galactorrhoea-amenorrhoea syndrome due to hyperprolactinaemia."",
+  ""Hypothyroidism can cause hyperprolactinaemia through increased TRH stimulation, leading to amenorrhoea and galactorrhoea."",
+  ""Pituitary cancer is rare and hypothalamic weight-loss amenorrhoea does not typically explain milk discharge.""
+]",Hypothyroidism can cause hyperprolactinaemia presenting with amenorrhoea and galactorrhoea.,,,,,2.0,3
+8375,Which of the following tumours present with proptosis?,D,All of the above,B,0.0,"[
+  ""Neuroblastoma commonly metastasizes to the orbit and can cause proptosis."",
+  ""Nephroblastoma typically metastasizes to lung and liver, and proptosis is not a typical presentation."",
+  ""Therefore, among the provided options, neuroblastoma is the correct tumour associated with proptosis.""
+]",Neuroblastoma can cause orbital metastases leading to proptosis.,,,,,,,,,D,1.0,"[
+  ""Neuroblastoma can metastasize to the orbit and commonly presents with proptosis in children."",
+  ""Ewing sarcoma can involve the orbit and may present with proptosis."",
+  ""Since the listed tumors are associated with proptosis, the best choice among the provided options is All of the above.""
+]","Both neuroblastoma and Ewing sarcoma can present with proptosis, so the inclusive option is correct.",,,,,C,0.0,"[
+  ""Proptosis can occur with orbital involvement by certain tumours."",
+  ""Ewing sarcoma can involve the orbit and present with proptosis."",
+  ""Nephroblastoma is not a typical tumour presenting with proptosis, so 'All of the above' is not correct.""
+]",Ewing sarcoma can present with orbital involvement causing proptosis.,1.0,3
+8400,A patient having glaucoma develops blepharoconjunctivitis after instilling some anti-glaucoma drug. Which of the following drug can be responsible for it:,A,Timolol,,,,,,,,,A,1.0,"[
+  ""Blepharoconjunctivitis after topical antiglaucoma therapy suggests a local ocular hypersensitivity/irritative adverse effect."",
+  ""Timolol, a topical beta-blocker used in glaucoma, can cause ocular irritation and allergic blepharoconjunctivitis."",
+  ""Latanoprost is more characteristically associated with conjunctival hyperemia, iris pigmentation, and eyelash growth; pilocarpine mainly causes miosis, brow ache, and accommodative spasm.""
+]",Topical timolol can cause allergic blepharoconjunctivitis.,C,0.0,"[
+  ""Blepharoconjunctivitis after topical antiglaucoma therapy suggests a local allergic or irritative adverse reaction."",
+  ""Timolol is more classically associated with systemic beta-blocker effects, while latanoprost commonly causes conjunctival hyperemia, iris pigmentation, and eyelash growth."",
+  ""Dipivefrine is known to cause allergic blepharoconjunctivitis and follicular conjunctivitis.""
+]",Dipivefrine can cause allergic blepharoconjunctivitis after topical use in glaucoma.,C,0.0,"[
+  ""Identify the adverse effect: blepharoconjunctivitis after an antiglaucoma drug suggests a local allergic/toxic ocular reaction."",
+  ""Compare options: timolol mainly causes beta-blocker systemic effects and ocular irritation; pilocarpine causes miosis, brow ache, and accommodative spasm."",
+  ""Dipiverine/dipivefrin is known to cause allergic blepharoconjunctivitis and follicular conjunctivitis.""
+]",Dipiverine is associated with allergic blepharoconjunctivitis in glaucoma treatment.,,,,,1.0,3
+8433,Passive cutaneous anaphylaxis detect:,A,Heterocytotropic ab,,,,,,,,,B,0.0,"[
+  ""Passive cutaneous anaphylaxis is an in vivo test based on passive transfer of sensitizing antibody into skin."",
+  ""On subsequent antigen challenge, mast-cell mediator release causes a local wheal-and-flare/vascular permeability reaction."",
+  ""Thus, among the options, the detectable reaction is the wheal and flare reaction.""
+]",Passive cutaneous anaphylaxis is demonstrated by a local wheal-and-flare reaction after antigen challenge.,A,1.0,"[
+  ""Passive cutaneous anaphylaxis is used to demonstrate serum antibodies that can passively sensitize skin mast cells."",
+  ""These cytotropic/anaphylactic antibodies are detected by later antigen challenge producing local mediator release."",
+  ""Among the options, heterocytotropic antibody detection best matches passive cutaneous anaphylaxis.""
+]","Passive cutaneous anaphylaxis detects cytotropic anaphylactic antibodies, classically heterocytotropic antibodies in this context.",A,1.0,"[
+  ""Passive cutaneous anaphylaxis is a passive transfer test using serum antibodies to sensitize skin mast cells."",
+  ""It is primarily used to demonstrate skin-sensitizing cytotropic antibodies involved in immediate hypersensitivity."",
+  ""Among the provided options, heterocytotropic antibody is the relevant detectable antibody type.""
+]","Passive cutaneous anaphylaxis detects cytotropic/reaginic antibodies, best matched here by heterocytotropic antibodies.",,,,,2.0,3
+8442,Serous Demilunes are present in large number in which gland,B,Submandibular,,,,,B,1.0,"[
+  ""Serous demilunes are features of mixed salivary glands where serous cells cap mucous acini."",
+  ""Parotid is a purely serous gland, so serous demilunes are not a prominent feature."",
+  ""Among the given options, submandibular is the mixed salivary gland and therefore contains serous demilunes.""
+]",Submandibular gland is a mixed salivary gland with mucous acini capped by serous demilunes.,,,,,,,,,C,0.0,"[
+  ""Serous demilunes are found in mixed salivary glands where serous cells cap mucous acini."",
+  ""The sublingual gland is predominantly mucous and has numerous mucous acini with serous demilunes."",
+  ""The submandibular gland has fewer mucous acini, and the pituitary gland does not contain serous demilunes.""
+]",Serous demilunes are present in large numbers in the sublingual gland.,C,0.0,"[
+  ""Serous demilunes occur in mixed salivary glands where serous cells cap mucous secretory units."",
+  ""Parotid is purely serous, so it does not have serous demilunes in large number."",
+  ""Sublingual gland is predominantly mucous and has many mucous acini capped by serous demilunes.""
+]",Sublingual gland contains numerous mucous acini with serous demilunes.,1.0,3
+8475,Immunosuppressive drugs are less effective in which type of graft rejection ?,B,Acute humoral rejection,,,,,B,1.0,"[
+  ""Acute cellular rejection is primarily T-cell mediated and usually responds well to standard immunosuppressive therapy."",
+  ""Acute humoral rejection is antibody-mediated, involving donor-specific antibodies and complement injury."",
+  ""Conventional immunosuppressive drugs are less effective against antibody-mediated rejection than against cellular rejection.""
+]",Acute humoral rejection is antibody-mediated and is less responsive to standard immunosuppressive drugs than acute cellular rejection.,,,,,,,,,C,0.0,"[
+  ""Identify the rejection types listed: acute humoral rejection, chronic rejection, and none of the above."",
+  ""Immunosuppressive drugs can help prevent or treat many acute rejection episodes, though antibody-mediated rejection may need additional therapies."",
+  ""Chronic rejection is generally progressive and poorly responsive to immunosuppressive drugs.""
+]",Immunosuppressive drugs are less effective in chronic graft rejection.,C,0.0,"[
+  ""Acute cellular rejection is primarily T-cell mediated and is generally responsive to immunosuppressive therapy."",
+  ""Acute humoral rejection can be more difficult but may respond to targeted therapies such as plasmapheresis, IVIG, and anti-B-cell/complement approaches."",
+  ""Chronic rejection involves progressive vascular narrowing and fibrosis, which are poorly reversible and less responsive to immunosuppressive drugs.""
+]",Chronic rejection is least responsive to immunosuppressive therapy because it causes progressive irreversible fibrosis and vasculopathy.,1.0,3
+8495,It is true about H. Pylori that it -,D,Treatment prevents gastric lymphoma,A,0.0,"[
+  ""H. pylori is a bacterium, not a protozoan, so option B is false."",
+  ""H. pylori is classically a gram-negative spiral/curved organism, so option A is true."",
+  ""Although H. pylori eradication is related to management of gastric MALT lymphoma risk, the most directly and unambiguously correct option is A.""
+]",H. pylori is a gram-negative spiral-shaped bacterium.,,,,,,,,,D,1.0,"[
+  ""H. pylori is a bacterium, not a protozoa, so option B is false."",
+  ""H. pylori causes chronic gastritis, but adult disease is usually due to persistent infection rather than reinfection, so option C is false."",
+  ""Eradication of H. pylori reduces the risk of and can treat early gastric MALT lymphoma, so option D is true.""
+]",H. pylori treatment can prevent or lead to regression of gastric MALT lymphoma.,,,,,A,0.0,"[
+  ""H. pylori is a gram-negative, spiral/curved bacillus."",
+  ""Chronic gastritis in adults is mainly due to persistent infection, not reinfection."",
+  ""Eradication may regress some MALT lymphomas, but the most universally correct statement among the options is its gram-negative spiral morphology.""
+]",H. pylori is a gram-negative spiral organism.,1.0,3
+8502,Radiomimetric BACTEC detect growth of M tuberculosis in how much time ?,B,2-3 week,,,,,A,0.0,"[
+  ""Radiometric BACTEC is a rapid liquid culture method for detecting Mycobacterium tuberculosis growth."",
+  ""It detects metabolic activity much faster than conventional solid culture, typically around 7\u201314 days."",
+  ""Among the given options, 1 week is the closest correct detection time.""
+]","Radiometric BACTEC can detect M. tuberculosis growth rapidly, around 1 week.",,,,,,,,,B,1.0,"[
+  ""Radiometric BACTEC is a rapid culture method for detecting growth of Mycobacterium tuberculosis."",
+  ""It detects growth faster than conventional Lowenstein-Jensen culture, which usually takes 4-8 weeks."",
+  ""Among the given options, 2-3 weeks best matches the detection time for radiometric BACTEC.""
+]",Radiometric BACTEC detects M. tuberculosis growth in about 2-3 weeks.,A,0.0,"[
+  ""Radiometric BACTEC detects mycobacterial growth much faster than conventional culture."",
+  ""Conventional Lowenstein-Jensen culture usually takes 4-8 weeks, so option C is not correct for BACTEC."",
+  ""Radiometric BACTEC can detect M. tuberculosis growth in about 1 week, making option A the best choice.""
+]","Radiometric BACTEC detects M. tuberculosis growth rapidly, typically in about 1 week.",1.0,3
+8505,Egg is ideal protein because it has –,C,High biological efficiency and NPU,C,1.0,"[
+  ""Egg protein is considered a reference or ideal protein due to its excellent amino acid profile and digestibility."",
+  ""High biological value/efficiency and high net protein utilization reflect superior protein quality."",
+  ""High cholesterol or protein amount per 100 g does not define an ideal protein.""
+]",Egg is ideal protein because it has high biological efficiency/value and high NPU.,D,0.0,"[
+  ""Egg is considered an ideal/reference protein due to its excellent essential amino acid composition."",
+  ""The defining feature is that it provides all essential amino acids without a limiting amino acid."",
+  ""High cholesterol is unrelated, and high NPU is a quality measure rather than the primary reason.""
+]",Egg protein has no limiting amino acid and contains essential amino acids in optimal proportions.,D,0.0,"[
+  ""Egg is considered a reference or ideal protein due to its balanced essential amino acid profile."",
+  ""High protein per 100 g is not the defining reason for ideal protein quality."",
+  ""Among the options, absence of a limiting amino acid best explains why egg protein is ideal.""
+]","Egg protein contains all essential amino acids in adequate proportions, with no limiting amino acid.",,,,,,,,,,,,,1.0,3
+8552,What is the abnormality shown in this shoulder Radiograph?,B,Posterior Dislocation Of Shoulder,,,,,A,0.0,"[
+  ""Assess the expected shoulder radiograph finding among the provided options."",
+  ""Anterior shoulder dislocation is identified when the humeral head is displaced anteroinferiorly, often subcoracoid, relative to the glenoid."",
+  ""This pattern best matches the abnormality compared with posterior dislocation or a simple bone cyst.""
+]",The radiographic abnormality is most consistent with an anterior shoulder dislocation.,,,,,,,,,B,1.0,"[
+  ""The abnormality in a shoulder radiograph should be matched to either joint malalignment or an osseous lesion."",
+  ""Posterior shoulder dislocation is identified by abnormal glenohumeral alignment rather than a focal destructive or cystic bone lesion."",
+  ""Among the provided options, the described shoulder radiograph abnormality is most consistent with posterior dislocation.""
+]",Posterior shoulder dislocation best fits a shoulder radiograph abnormality involving glenohumeral malalignment.,B,1.0,"[
+  ""Assess the glenohumeral alignment on the shoulder radiograph."",
+  ""The humeral head appearance and alignment are most consistent with posterior shoulder dislocation rather than anterior dislocation."",
+  ""There are no features suggesting a cartilaginous bone tumor such as chondrosarcoma.""
+]",Findings are consistent with posterior dislocation of the shoulder.,2.0,3
+8586,Looser's zones are seen in which of the following ?,D,All of the above,A,0.0,"[
+  ""Looser's zones are pseudofractures classically associated with osteomalacia."",
+  ""Paget's disease has different radiographic features and is not the classic condition for Looser's zones."",
+  ""Since not all listed conditions are correct, 'All of the above' is incorrect.""
+]",Looser's zones are characteristic pseudofractures seen in osteomalacia.,,,,,,,,,C,0.0,"[
+  ""Looser's zones are pseudofractures classically associated with osteomalacia and related defective mineralization states."",
+  ""Renal osteodystrophy can include osteomalacia/defective mineralization, so Looser's zones may be seen in it."",
+  ""Paget's disease is not the classic condition for Looser's zones, so 'All of the above' is not correct.""
+]",Looser's zones are seen in renal osteodystrophy due to defective bone mineralization.,,,,,D,1.0,"[
+  ""Looser's zones are pseudofractures classically associated with osteomalacia."",
+  ""Renal osteodystrophy can include defective mineralization and osteomalacia-like changes, so Looser's zones may also be seen."",
+  ""Since both Osteomalacia and Renal osteodystrophy are correct among the listed options, the best answer is All of the above.""
+]",Looser's zones are seen in osteomalacia and can also occur in renal osteodystrophy.,1.0,3
+8590,Epulis is?,A,Benign,,,,,,,,,A,1.0,"[
+  ""Epulis refers to a localized gingival swelling or tumor-like lesion."",
+  ""Most epulides are reactive or benign lesions rather than malignant tumors."",
+  ""It is not classified as a precancerous condition.""
+]",Epulis is a benign localized gingival lesion.,C,0.0,"[
+  ""Epulis refers to a localized gingival swelling or mass."",
+  ""Most lesions called epulis are not malignant tumors."",
+  ""They are generally considered reactive hyperplastic processes of the gingiva.""
+]",Epulis is best classified as a reactive process rather than a true benign or malignant tumor.,C,0.0,"[
+  ""Epulis refers to a localized gingival swelling or tumor-like lesion."",
+  ""Most epulides are non-neoplastic inflammatory/reactive hyperplastic lesions rather than true tumors."",
+  ""It is not considered precancerous.""
+]",Epulis is best classified as a reactive process of the gingiva.,,,,,1.0,3
+8592,Which of the following medications essential for ameliorating the toxicity of pemetrexed:,A,Folinic acid and vitamin B6,,,,,,,,,B,0.0,"[
+  ""Pemetrexed is an antifolate chemotherapy agent associated with significant hematologic and gastrointestinal toxicity without vitamin supplementation."",
+  ""Standard toxicity reduction requires folic acid plus vitamin B12 supplementation."",
+  ""Dexamethasone may reduce rash but is not the essential vitamin supplementation regimen, and folinic acid/vitamin B6 is not the standard regimen.""
+]",Pemetrexed toxicity is ameliorated by folic acid and vitamin B12 supplementation.,B,0.0,"[
+  ""Pemetrexed is an antifolate chemotherapy agent whose toxicities are reduced by vitamin supplementation."",
+  ""Standard supplementation required with pemetrexed is folic acid plus vitamin B12."",
+  ""Option B matches the required supplementation, while the other options list incorrect vitamins.""
+]",Folic acid and vitamin B12 are essential to reduce pemetrexed toxicity.,D,0.0,"[
+  ""Pemetrexed toxicity is reduced by mandatory folate supplementation, classically with folic acid plus vitamin B12."",
+  ""Dexamethasone is also commonly given with pemetrexed to reduce cutaneous toxicity such as rash."",
+  ""Among the provided options, Option D is the only one containing folic acid and a clinically relevant toxicity-reducing co-medication.""
+]","Folic acid is required with pemetrexed, and dexamethasone is used to reduce pemetrexed-associated skin toxicity.",,,,,0.0,3
+8619,Sensory supply of vocal cord ?,D,All of the above,D,1.0,"[
+  ""Internal laryngeal nerve supplies sensation to supraglottic laryngeal mucosa up to the vocal folds."",
+  ""Recurrent laryngeal nerve supplies sensation to infraglottic mucosa below the vocal folds."",
+  ""The vocal cord region can receive sensory innervation related to both adjacent territories, so among the given options the best answer is all of the above.""
+]",Sensory innervation around the vocal cord involves both internal laryngeal and recurrent laryngeal nerves.,,,,,,,,,B,0.0,"[
+  ""The internal branch of the superior laryngeal nerve supplies sensation to laryngeal mucosa above the vocal cords."",
+  ""The recurrent laryngeal nerve supplies sensation to the mucosa below the vocal cords and is classically associated with sensory supply of the vocal cord region."",
+  ""Therefore, among the given options, recurrent laryngeal nerve is the best answer.""
+]",Sensory supply of the vocal cord is classically via the recurrent laryngeal nerve.,,,,,A,0.0,"[
+  ""The sensory innervation relevant to the laryngeal mucosa at/above the vocal cord region is carried by the internal laryngeal nerve."",
+  ""The internal laryngeal nerve is the sensory branch of the superior laryngeal nerve, but it is the more specific correct answer."",
+  ""All of the above is not appropriate when the specific sensory nerve is internal laryngeal nerve.""
+]",The internal laryngeal nerve provides sensory supply to the vocal cord region.,1.0,3
+8630,Chromosome-associated with bipolar disease -,C,Chromosome 18,C,1.0,"[
+  ""Bipolar disorder has reported genetic linkage associations on several chromosomes, notably including chromosome 18."",
+  ""Chromosome 16 and chromosome 13 are not the classic expected associations in this type of question."",
+  ""Among the provided options, chromosome 18 is the best recognized association.""
+]",Bipolar disorder has been linked in genetic studies to chromosome 18.,C,1.0,"[
+  ""Bipolar disorder has multiple genetic susceptibility loci rather than a single causative chromosome."",
+  ""Among the listed options, chromosome 18 has one of the best-recognized reported linkage associations with bipolar disorder."",
+  ""Chromosomes 16 and 11 have been less consistently or historically implicated, so chromosome 18 is the best answer.""
+]",Chromosome 18 is a recognized susceptibility locus associated with bipolar disorder.,D,0.0,"[
+  ""Bipolar disorder has shown genetic linkage associations in multiple chromosomal regions, but classic medical genetics teaching commonly cites chromosome 11."",
+  ""Chromosome 13 is more classically linked in psychiatric genetics to some schizophrenia susceptibility findings, not the standard bipolar association."",
+  ""Among the provided options, chromosome 11 is the best recognized answer for bipolar disease association.""
+]",Bipolar disorder is classically associated with chromosome 11 in standard exam references.,,,,,,,,,,,,,2.0,3
+8635,A five year old child presents with ballooning of prepuce after micturation. Examination of penis reveals prepucial adhesions which the following the best treatment,B,Circumcision,,,,,D,0.0,"[
+  ""Preputial adhesions and non-retractile foreskin are commonly physiological in a 5-year-old child."",
+  ""Ballooning of the prepuce during or after micturition alone is not an indication for circumcision or forced adhesiolysis if there is no pathological phimosis, recurrent infection, or urinary obstruction."",
+  ""Therefore the best initial treatment among the options is conservative management.""
+]",Physiological preputial adhesions with ballooning are usually managed conservatively unless complicated.,,,,,,,,,D,0.0,"[
+  ""Ballooning of the prepuce with micturition in a 5-year-old commonly reflects physiological phimosis/preputial adhesions."",
+  ""Physiological preputial adhesions usually resolve spontaneously and do not require circumcision or dorsal slit unless complicated by recurrent infection, scarring, or obstruction."",
+  ""Therefore the best option among those provided is conservative management.""
+]",Prepucial adhesions with ballooning in a young child are usually physiological and are managed conservatively.,A,0.0,"[
+  ""Ballooning of the prepuce after micturition in a 5-year-old with prepucial adhesions suggests physiological phimosis or adhesions rather than an indication for immediate circumcision."",
+  ""The appropriate treatment for symptomatic prepucial adhesions is adhesiolysis with gentle dilatation."",
+  ""Circumcision is reserved for pathological phimosis or recurrent complications, and dorsal slit is mainly used for emergency relief such as severe paraphimosis.""
+]",Prepucial adhesions causing ballooning are best treated by adhesiolysis and dilatation.,0.0,3
+8637,Cavett test is used for detection of,B,Alcohol,,,,,B,1.0,"[
+  ""Cavett test is a forensic/toxicological test associated with detection of alcohol."",
+  ""Opiates are typically detected by tests such as Marquis, Mecke, or Frohde, not Cavett."",
+  ""Cocaine is commonly detected by Scott/cobalt thiocyanate testing, not Cavett.""
+]",Cavett test is used for detection of alcohol.,,,,,,,,,C,0.0,"[
+  ""Cavett test is a named toxicological screening test."",
+  ""Alcohol is commonly detected by dichromate-based tests, and cocaine by cobalt thiocyanate/Scott test."",
+  ""Cavett test is associated with detection of barbiturates.""
+]",Cavett test is used for detection of barbiturates.,B,1.0,"[
+  ""Cavett test is a forensic toxicology test associated with detecting alcohol."",
+  ""Opiates are commonly detected by tests such as Marquis, Mecke, or Frohde tests."",
+  ""Barbiturates are commonly detected by Dille-Koppanyi or Zwikker tests.""
+]",Cavett test is used for detection of alcohol.,2.0,3
