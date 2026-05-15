@@ -1,48 +1,109 @@
-============================================================
-MCQ VERIFICATION ANALYSIS REPORT
-============================================================
 
-Total Questions: 1000
-Correct Predictions: 932
-Wrong Predictions: 68
-Accuracy: 93.20%
+======================================================================
+  UNITED / FULL MCQ EVALUATION REPORT
+======================================================================
 
-STRICT ACCURACY
-----------------------------------------
-(Exactly one YES prediction and correct)
-Strict Correct: 924
-Strict Accuracy: 92.40%
+[DATASET]
+----------------------------------------------------------------------
+  Input file                                   ./MCQ_Verification_Results/united_option_verification_results.xlsx
+  Total rows (raw)                             1000
+  Invalid / dropped rows                       8
+  Valid rows                                   992
+  Total questions                              992
+  Total verifier decisions                     3968
 
-YES OPTION DISTRIBUTION
-----------------------------------------
-0 YES options: 1
-1 YES option : 990
-2 YES options: 4
-3 YES options: 3
-4 YES options: 2
+[1. MCQ ACCURACY  (from selected_answer_letter)]
+----------------------------------------------------------------------
+  MCQ Accuracy                                 0.9325
+  Correct                                      925
+  Wrong                                        67
 
-MULTI-YES ANALYSIS
-----------------------------------------
-Multi-YES correct: 8
-Multi-YES wrong: 1
+[2. LABEL CONSISTENCY CHECK]
+----------------------------------------------------------------------
+  Label-Selection Inconsistencies              0
+  Multi-YES from labels                        2
+  NONE from labels                             0
+  Multi-YES correct                            1
+  Multi-YES wrong                              1
 
-OPTION YES COUNTS
-----------------------------------------
-A: 328
-B: 268
-C: 224
-D: 195
+[3. FLATTENED BINARY METRICS  (from selected_answer_letter)]
+----------------------------------------------------------------------
+  Total decisions                              3968
+  TP                                           925
+  TN                                           2909
+  FP                                           67
+  FN                                           67
 
-GROUND TRUTH DISTRIBUTION
-----------------------------------------
-C: 216
-A: 327
-B: 265
-D: 192
+  Binary Accuracy                              0.9662
+  Precision                                    0.9325
+  Recall (Sensitivity)                         0.9325
+  Specificity                                  0.9775
+  F1 Score                                     0.9325
+  Balanced Accuracy                            0.9550
+  MCC                                          0.9099
+  Cohen's Kappa                                0.9099
+  NPV                                          0.9775
+  False Positive Rate                          0.0225
+  False Negative Rate                          0.0675
 
-PER OPTION METRICS
-----------------------------------------
-A -> TP=304 | FP=24 | FN=23 | Precision=0.9268 | Recall=0.9297
-B -> TP=248 | FP=20 | FN=17 | Precision=0.9254 | Recall=0.9358
-C -> TP=202 | FP=22 | FN=14 | Precision=0.9018 | Recall=0.9352
-D -> TP=178 | FP=17 | FN=14 | Precision=0.9128 | Recall=0.9271
+  Per-Letter Metrics:
+    A: TP=301 FP=21 FN=23  Prec=0.9348  Rec=0.9290  F1=0.9319
+    B: TP=245 FP=14 FN=16  Prec=0.9459  Rec=0.9387  F1=0.9423
+    C: TP=201 FP=18 FN=15  Prec=0.9178  Rec=0.9306  F1=0.9241
+    D: TP=178 FP=14 FN=13  Prec=0.9271  Rec=0.9319  F1=0.9295
+
+[4. MCQ RECONSTRUCTION  (from label columns)]
+----------------------------------------------------------------------
+  Strict Accuracy  (label-based)               0.9315
+  Relaxed Accuracy (label-based)               0.9335
+  Strict Correct                               924
+  Relaxed Correct                              926
+
+  YES Distribution (label columns):
+    1 YES: 990
+    3 YES: 1
+    4 YES: 1
+
+  Prediction Type (label columns):
+    MULTI_3: 1
+    MULTI_4: 1
+    SINGLE: 990
+
+[5. CALIBRATION]
+----------------------------------------------------------------------
+  Letter     Pred YES   GT YES  Pred Rate  GT Rate  Cal Error
+  A               322      324     0.3246   0.3266     0.0020
+  B               259      261     0.2611   0.2631     0.0020
+  C               219      216     0.2208   0.2177     0.0030
+  D               192      191     0.1935   0.1925     0.0010
+
+[6. LETTER DISTRIBUTIONS]
+----------------------------------------------------------------------
+  GT Distribution:
+    A: 324
+    B: 261
+    C: 216
+    D: 191
+  Selection Distribution:
+    A: 322
+    B: 259
+    C: 219
+    D: 192
+
+[7. REASONING]
+----------------------------------------------------------------------
+  Avg reasoning length (chars)                 598.8054
+  Median reasoning length (chars)              578.0000
+
+[SUMMARY]
+======================================================================
+  MCQ Accuracy                                 0.9325
+  Binary Accuracy                              0.9662
+  Strict MCQ Acc (label)                       0.9315
+  Relaxed MCQ Acc (label)                      0.9335
+  F1                                           0.9325
+  MCC                                          0.9099
+  Cohen's Kappa                                0.9099
+  Label Inconsistencies                        0
+  Multi-YES (labels)                           2
+======================================================================

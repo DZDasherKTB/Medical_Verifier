@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Verification — 4-Experiment Comparison</title>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@700;800&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        :root{
+            --solo:#E85D42;--united:#3B82C4;--duo:#9B5DE5;--triplet:#2DB87A;
+            --solo-a:rgba(232,93,66,.15);--united-a:rgba(59,130,196,.15);
+            --duo-a:rgba(155,93,229,.15);--triplet-a:rgba(45,184,122,.15);
+            --bg:#090C12;--s1:#101420;--s2:#161B28;--s3:#1C2333;
+            --bdr:rgba(255,255,255,.07);--bdr2:rgba(255,255,255,.12);
+            --t1:#E4E9F6;--t2:#8A93AF;--t3:#555E7A;
+            --accent:#F7C948;
+        }
+        body{background:var(--bg);color:var(--t1);font-family:'Figtree',sans-serif;font-size:14px;line-height:1.6;padding-bottom:80px}
+
+        .hero{padding:56px 52px 40px;border-bottom:1px solid var(--bdr);position:relative;overflow:hidden}
+        .hero::after{content:'';position:absolute;top:-80px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(45,184,122,.08) 0%,transparent 65%);pointer-events:none}
+        .eyebrow{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+        h1{font-family:'Syne',sans-serif;font-size:clamp(24px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-.025em;margin-bottom:12px}
+        h1 em{color:var(--accent);font-style:normal}
+        .subtitle{color:var(--t2);font-size:15px;font-weight:300;max-width:620px;margin-bottom:24px}
+        
+        .pills{display:flex;gap:9px;flex-wrap:wrap}
+        .pill{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:99px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.05em;border:1px solid}
+        .pill.s{color:var(--solo);  border-color:rgba(232,93,66,.35); background:var(--solo-a)}
+        .pill.u{color:var(--united);border-color:rgba(59,130,196,.35);background:var(--united-a)}
+        .pill.d{color:var(--duo);   border-color:rgba(155,93,229,.35);background:var(--duo-a)}
+        .pill.t{color:var(--triplet);border-color:rgba(45,184,122,.35);background:var(--triplet-a)}
+        .dot{width:6px;height:6px;border-radius:50%}
+
+        .warn-bar{margin:24px 52px 0;padding:12px 18px;background:rgba(247,201,72,.07);border:1px solid rgba(247,201,72,.22);border-radius:10px;font-size:12.5px;color:rgba(247,201,72,.85);display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+        .warn-bar strong{color:var(--accent);font-weight:600}
+
+        .cards-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:36px 52px 0}
+        .card{background:var(--s1);border:1px solid var(--bdr);border-radius:14px;padding:20px 22px;position:relative;overflow:hidden}
+        .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0}
+        .card.s::before{background:var(--solo)}.card.u::before{background:var(--united)}
+        .card.d::before{background:var(--duo)}.card.t::before{background:var(--triplet)}
+        .card-label{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
+        .card-exp{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:12px}
+        .card.s .card-exp{color:var(--solo)}.card.u .card-exp{color:var(--united)}
+        .card.d .card-exp{color:var(--duo)}.card.t .card-exp{color:var(--triplet)}
+        .card-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
+        .cm-val{font-size:20px;font-weight:600;line-height:1;color:var(--t1)}
+        .cm-key{font-size:10px;color:var(--t3);margin-top:2px}
+        .win-badge{position:absolute;top:14px;right:14px;border-radius:99px;padding:3px 9px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em}
+        .win-badge.t{background:rgba(45,184,122,.15);border:1px solid rgba(45,184,122,.35);color:var(--triplet)}
+        .win-badge.d{background:rgba(155,93,229,.12);border:1px solid rgba(155,93,229,.3);color:var(--duo)}
+
+        .sec{padding:44px 52px 0}
+        .sec-title{font-family:'Syne',sans-serif;font-size:19px;font-weight:700;letter-spacing:-.01em;margin-bottom:3px}
+        .sec-desc{color:var(--t2);font-size:13px;font-weight:300;margin-bottom:20px}
+        .sec-rule{height:1px;background:var(--bdr);margin-bottom:24px}
+
+        .chart-box{background:var(--s1);border:1px solid var(--bdr);border-radius:14px;padding:22px;margin-bottom:18px}
+        .chart-title{font-size:11.5px;font-weight:500;color:var(--t2);margin-bottom:14px;font-family:'DM Mono',monospace;letter-spacing:.05em;text-transform:uppercase}
+        .chart-grid{display:grid;gap:18px}
+        .chart-grid.cols2{grid-template-columns:1fr 1fr}
+
+        .note{background:var(--s2);border:1px solid var(--bdr);border-radius:10px;padding:13px 16px;font-size:12px;color:var(--t2);margin-top:10px;line-height:1.6}
+        .footer{text-align:center;color:var(--t3);font-size:11px;font-family:'DM Mono',monospace;margin-top:56px;letter-spacing:.05em}
+    </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="eyebrow">MCQ Verification Research · 2025</div>
+  <h1>Four-Experiment<br><em>Comparison</em> Dashboard</h1>
+  <p class="subtitle">Benchmarking four inference formulations — independent, holistic, pairwise, and triplet — across a unified binary evaluation space.</p>
+  <div class="pills">
+    <span class="pill s"><span class="dot" style="background:var(--solo)"></span>Solo · Independent</span>
+    <span class="pill u"><span class="dot" style="background:var(--united)"></span>United · Full MCQ</span>
+    <span class="pill d"><span class="dot" style="background:var(--duo)"></span>Duo · Pairwise</span>
+    <span class="pill t"><span class="dot" style="background:var(--triplet)"></span>Triplet · 3-Option</span>
+  </div>
+</div>
+
+<div class="warn-bar">
+  <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;margin-top:1px"><path d="M8 1.5L14.5 13H1.5L8 1.5Z" stroke="#F7C948" stroke-width="1.3"/><line x1="8" y1="6" x2="8" y2="9.5" stroke="#F7C948" stroke-width="1.3"/><circle cx="8" cy="11" r=".65" fill="#F7C948"/></svg>
+  <div><strong>Structural Consistency Fix.</strong> All charts have been updated with fixed linear axes (type: 'linear') and uniform ranges (0-100% or 60-100%) to ensure fair visual comparison across all experiments.</div>
+</div>
+
+<div class="cards-row">
+  <div class="card s">
+    <div class="card-label">Experiment 01</div>
+    <div class="card-exp">Solo · Independent</div>
+    <div class="card-metrics">
+      <div><div class="cm-val">89.56%</div><div class="cm-key">Binary Acc</div></div>
+      <div><div class="cm-val">81.16%</div><div class="cm-key">F1 Score</div></div>
+      <div><div class="cm-val">71.65%</div><div class="cm-key">Strict MCQ</div></div>
+      <div><div class="cm-val">74.71%</div><div class="cm-key">MCC</div></div>
+    </div>
+  </div>
+  <div class="card u">
+    <div class="card-label">Experiment 02</div>
+    <div class="card-exp">United · Full MCQ</div>
+    <div class="card-metrics">
+      <div><div class="cm-val">96.62%</div><div class="cm-key">Binary Acc</div></div>
+      <div><div class="cm-val">93.25%</div><div class="cm-key">F1 Score</div></div>
+      <div><div class="cm-val">93.15%</div><div class="cm-key">Strict MCQ</div></div>
+      <div><div class="cm-val">90.99%</div><div class="cm-key">MCC</div></div>
+    </div>
+  </div>
+  <div class="card d">
+    <div class="card-label">Experiment 03</div>
+    <div class="card-exp">Duo · Pairwise</div>
+    <div class="win-badge d">Best acc gain</div>
+    <div class="card-metrics">
+      <div><div class="cm-val">96.20%</div><div class="cm-key">Binary Acc</div></div>
+      <div><div class="cm-val">96.20%</div><div class="cm-key">F1 Score</div></div>
+      <div><div class="cm-val">93.21%</div><div class="cm-key">Strict MCQ</div></div>
+      <div><div class="cm-val">92.40%</div><div class="cm-key">MCC</div></div>
+    </div>
+  </div>
+  <div class="card t">
+    <div class="card-label">Experiment 04</div>
+    <div class="card-exp">Triplet · 3-Option</div>
+    <div class="win-badge t">Best MCC/Kappa</div>
+    <div class="card-metrics">
+      <div><div class="cm-val">97.88%</div><div class="cm-key">Binary Acc</div></div>
+      <div><div class="cm-val">96.82%</div><div class="cm-key">F1 Score</div></div>
+      <div><div class="cm-val">94.81%</div><div class="cm-key">Strict MCQ</div></div>
+      <div><div class="cm-val">95.24%</div><div class="cm-key">MCC</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Core Binary Metrics</div>
+  <div class="sec-desc">Precision, Recall, F1, Specificity, MCC — standardized on a 60-100% linear scale for comparison.</div>
+  <div class="sec-rule"></div>
+  <div class="chart-grid cols2">
+    <div class="chart-box">
+      <div class="chart-title">Grouped comparison — all metrics</div>
+      <div id="ch1" style="height:380px"></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Radar — metric profile per experiment</div>
+      <div id="ch2" style="height:380px"></div>
+    </div>
+  </div>
+  <div class="chart-box">
+    <div class="chart-title">Ranked performance — lollipop chart</div>
+    <div id="ch3" style="height:320px"></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Confusion Matrix — Normalized Rates</div>
+  <div class="sec-desc">Comparison of TPR (Recall) vs TNR (Specificity) and error distribution.</div>
+  <div class="sec-rule"></div>
+  <div class="chart-grid cols2">
+    <div class="chart-box">
+      <div class="chart-title">TPR / TNR / FPR / FNR per experiment</div>
+      <div id="ch4" style="height:340px"></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Decision composition — % of total decisions</div>
+      <div id="ch5" style="height:340px"></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">MCQ Reconstruction Accuracy</div>
+  <div class="sec-rule"></div>
+  <div class="chart-grid cols2">
+    <div class="chart-box">
+      <div class="chart-title">Strict vs relaxed MCQ accuracy</div>
+      <div id="ch6" style="height:320px"></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Error trade-off — FPR vs FNR</div>
+      <div id="ch7" style="height:320px"></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Full Metric Heatmap</div>
+  <div class="sec-rule"></div>
+  <div class="chart-box">
+    <div id="ch13" style="height:450px"></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Performance Progression</div>
+  <div class="sec-rule"></div>
+  <div class="chart-box">
+    <div id="ch14" style="height:380px"></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Above-Baseline Gains — Performance vs Chance</div>
+  <div class="sec-desc">Metric improvements relative to the random baseline of each experiment.</div>
+  <div class="sec-rule"></div>
+  <div class="chart-grid cols2">
+    <div class="chart-box">
+      <div class="chart-title">Above-baseline gains — all metrics</div>
+      <div id="ch15" style="height:360px"></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">MCC &amp; Cohen's Kappa — directly comparable</div>
+      <div id="ch16" style="height:360px"></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">MCQ Verification Research · 2025 · Optimized Layouts</div>
+
+<script>
+/* 1. DEFINE CONSTANTS FIRST */
+const S='#E85D42', U='#3B82C4', D='#9B5DE5', T='#2DB87A';
+const SA='rgba(232,93,66,.65)', UA='rgba(59,130,196,.65)', DA='rgba(155,93,229,.65)', TA='rgba(45,184,122,.65)';
+const EXPS=['Solo','United','Duo','Triplet'];
+
+const LB={
+  paper_bgcolor:'transparent',plot_bgcolor:'transparent',
+  font:{family:"'Figtree',sans-serif",color:'#8A93AF',size:11.5},
+  margin:{t:44,b:52,l:64,r:16},
+  legend:{bgcolor:'transparent',bordercolor:'transparent',font:{color:'#8A93AF',size:11},orientation:'h',x:0,y:1.08},
+  xaxis:{gridcolor:'rgba(255,255,255,.05)',zerolinecolor:'rgba(255,255,255,.1)',tickfont:{color:'#8A93AF'}, type: 'category'},
+  yaxis:{gridcolor:'rgba(255,255,255,.05)',zerolinecolor:'rgba(255,255,255,.1)',tickfont:{color:'#8A93AF'}, type: 'linear'},
+};
+const cfg={displayModeBar:false,responsive:true};
+
+/* 2. CORE PLOTTING LOGIC */
+
+/* CH1: Grouped bar */
+const mets=['Bin Acc','Precision','Recall','Specificity','F1','MCC'];
+const vS=[89.56,73.93,89.94,89.43,81.16,74.71];
+const vU=[96.62,93.25,93.25,97.75,93.25,90.99];
+const vD=[96.20,96.20,96.20,96.20,96.20,92.40];
+const vT=[97.88,96.82,96.82,98.41,96.82,95.24];
+
+const mkBar=(name,y,c,ca)=>({name,x:mets,y,type:'bar',marker:{color:ca,line:{color:c,width:1.5}},hovertemplate:`%{x}<br>${name}: %{y:.2f}%<extra></extra>`});
+Plotly.newPlot('ch1',[mkBar('Solo',vS,S,SA),mkBar('United',vU,U,UA),mkBar('Duo',vD,D,DA),mkBar('Triplet',vT,T,TA)],{
+  ...LB, barmode:'group', bargap:.16, yaxis:{...LB.yaxis, range:[60,101], ticksuffix:'%'}
+},cfg);
+
+/* CH2: Radar */
+const rm=['Bin Acc','Precision','Recall','Specificity','F1','MCC'];
+const cl=(a)=>[...a,a[0]];
+const mkRadar=(name,r,c,fa)=>({type:'scatterpolar',name,r:cl(r),theta:[...rm,rm[0]],fill:'toself',fillcolor:fa,line:{color:c,width:2}});
+Plotly.newPlot('ch2',[
+  mkRadar('Solo',vS,S,'rgba(232,93,66,.1)'),mkRadar('United',vU,U,'rgba(59,130,196,.1)'),
+  mkRadar('Duo',vD,D,'rgba(155,93,229,.1)'),mkRadar('Triplet',vT,T,'rgba(45,184,122,.12)'),
+],{
+  ...LB, polar:{bgcolor:'transparent',radialaxis:{visible:true,range:[60,100],gridcolor:'rgba(255,255,255,.08)',ticksuffix:'%'}},
+},cfg);
+
+/* CH3: Lollipop */
+const lm=['Bin Acc','F1','MCC','Strict MCQ','Relaxed MCQ'];
+const lS=[89.56,81.16,74.71,71.65,89.94];
+const lU=[96.62,93.25,90.99,93.15,93.35];
+const lD=[96.20,96.20,92.40,93.21,98.50];
+const lT=[97.88,96.82,95.24,94.81,99.08];
+const mkLol=(name,x,c)=>({name,x,y:lm,mode:'markers',type:'scatter',marker:{color:c,size:11}});
+Plotly.newPlot('ch3',[mkLol('Solo',lS,S),mkLol('United',lU,U),mkLol('Duo',lD,D),mkLol('Triplet',lT,T)],{
+  ...LB, xaxis:{...LB.xaxis, type:'linear', range:[60,102], ticksuffix:'%'}, yaxis:{...LB.yaxis, type:'category', automargin:true}
+},cfg);
+
+/* CH4: Class-conditional rates */
+const rm4=['TPR','TNR','FPR','FNR'];
+const r4S=[89.94,89.43,10.57,10.06], r4U=[93.25,97.75,2.25,6.75], r4D=[96.20,96.20,3.80,3.80], r4T=[96.82,98.41,1.59,3.18];
+Plotly.newPlot('ch4',[mkBar('Solo',r4S,S,SA),mkBar('United',r4U,U,UA),mkBar('Duo',r4D,D,DA),mkBar('Triplet',r4T,T,TA)],{
+  ...LB, barmode:'group', yaxis:{...LB.yaxis, range:[0,105], ticksuffix:'%'}
+},cfg);
+
+/* CH5: Stacked composition (CRITICAL FIX FOR FLYING NUMBERS) */
+const exps4=['Solo','United','Duo','Triplet'];
+Plotly.newPlot('ch5', [
+  {name:'TP%', x:exps4, y:[22.48, 23.31, 48.10, 32.27], type:'bar', marker:{color:'rgba(45,184,122,.8)'}},
+  {name:'TN%', x:exps4, y:[67.07, 73.31, 48.10, 65.61], type:'bar', marker:{color:'rgba(59,130,196,.65)'}},
+  {name:'FP%', x:exps4, y:[7.93, 1.69, 1.90, 1.06],   type:'bar', marker:{color:'rgba(247,201,72,.8)'}},
+  {name:'FN%', x:exps4, y:[2.52, 1.69, 1.90, 1.06],   type:'bar', marker:{color:'rgba(232,93,66,.8)'}}
+], {
+  ...LB, barmode:'stack',
+  yaxis: { 
+    ...LB.yaxis, 
+    type: 'linear',  /* Forced Linear prevents random categorical ticks */
+    range: [0, 100], 
+    ticksuffix: '%',
+    tickmode: 'auto',
+    nticks: 10
+  }
+}, cfg);
+
+/* CH6: Strict vs Relaxed */
+Plotly.newPlot('ch6',[
+  {name:'Strict', x:exps4, y:[71.65,93.15,93.21,94.81], type:'bar', marker:{color:SA}},
+  {name:'Relaxed',x:exps4, y:[89.94,93.35,98.50,99.08], type:'bar', marker:{color:UA}}
+],{
+  ...LB, barmode:'group', yaxis:{...LB.yaxis, range:[60,102], ticksuffix:'%'}
+},cfg);
+
+/* CH7: Scatter plot */
+Plotly.newPlot('ch7',[
+  {name:'Solo', x:[10.57], y:[10.06], mode:'markers+text', text:['Solo'], marker:{color:S, size:18}},
+  {name:'United', x:[2.25], y:[6.75], mode:'markers+text', text:['United'], marker:{color:U, size:18}},
+  {name:'Duo', x:[3.80], y:[3.80], mode:'markers+text', text:['Duo'], marker:{color:D, size:18}},
+  {name:'Triplet', x:[1.59], y:[3.18], mode:'markers+text', text:['Triplet'], marker:{color:T, size:18}},
+],{
+  ...LB, xaxis:{...LB.xaxis, type:'linear', range:[0,12], ticksuffix:'%'}, yaxis:{...LB.yaxis, range:[0,12], ticksuffix:'%'}
+},cfg);
+
+/* CH13: Heatmap */
+const hmM=['Bin Acc','Precision','Recall','Specificity','F1','MCC','Strict'];
+Plotly.newPlot('ch13',[{
+  type:'heatmap',
+  z:[
+    [89.56,73.93,89.94,89.43,81.16,74.71,71.65],
+    [96.62,93.25,93.25,97.75,93.25,90.99,93.15],
+    [96.20,96.20,96.20,96.20,96.20,92.40,93.21],
+    [97.88,96.82,96.82,98.41,96.82,95.24,94.81]
+  ],
+  x:hmM, y:['Solo','United','Duo','Triplet'],
+  colorscale:[[0,S],[0.5,U],[1,T]],
+  texttemplate:'%{z:.1f}%', showscale:false
+}],{...LB, margin:{t:20,b:100,l:100,r:20}},cfg);
+
+/* CH14: Progression */
+const mkProg=(name,y,c)=>({name,x:exps4,y,type:'scatter',mode:'lines+markers',line:{color:c,width:2.5}});
+Plotly.newPlot('ch14',[
+  mkProg('Accuracy',[89.56,96.62,96.20,97.88],U),
+  mkProg('F1 Score',[81.16,93.25,96.20,96.82],T),
+  mkProg('MCC',[74.71,90.99,92.40,95.24],D)
+],{...LB, yaxis:{...LB.yaxis, range:[65,100], ticksuffix:'%'}},cfg);
+
+/* CH15: Above Baseline */
+const abS=[27.06,48.93,64.94,56.16], abT=[42.32,63.49,63.49,63.49];
+Plotly.newPlot('ch15',[
+  {name:'Solo', x:['Acc','Prec','Recall','F1'], y:abS, type:'bar', marker:{color:SA}},
+  {name:'Triplet', x:['Acc','Prec','Recall','F1'], y:abT, type:'bar', marker:{color:TA}}
+],{...LB, barmode:'group', yaxis:{...LB.yaxis, title:'pp improvement'}},cfg);
+
+/* CH16: MCC/Kappa */
+Plotly.newPlot('ch16',[
+  {name:'Solo', x:['MCC','Kappa'], y:[74.71,74.03], type:'bar', marker:{color:SA}},
+  {name:'United', x:['MCC','Kappa'], y:[90.99,90.99], type:'bar', marker:{color:UA}},
+  {name:'Duo', x:['MCC','Kappa'], y:[92.40,92.40], type:'bar', marker:{color:DA}},
+  {name:'Triplet', x:['MCC','Kappa'], y:[95.24,95.24], type:'bar', marker:{color:TA}}
+],{...LB, barmode:'group', yaxis:{...LB.yaxis, range:[60,100], ticksuffix:'%'}},cfg);
+</script>
+</body>
+</html>

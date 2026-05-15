@@ -1,0 +1,95 @@
+======================================================================
+  DUO / PAIRWISE EVALUATION REPORT
+======================================================================
+
+[DATASET]
+----------------------------------------------------------------------
+  Input file                                     ./MCQ_Verification_Results/duo_option_experiment_verification_results.xlsx
+  Total rows (raw)                               3003
+  Rows with errors/missing                       29
+  Valid rows (pairs)                             2974
+  Unique questions                               1001
+
+[1. PAIRWISE NATIVE METRICS]
+----------------------------------------------------------------------
+  Pairwise Accuracy                              0.9620
+  Question Consistency (all pairs won)           0.9321
+
+  Distractor Defeat Rate by Option Letter:
+    A  correct=642/680  defeat_rate=0.9441
+    B  correct=695/725  defeat_rate=0.9586
+    C  correct=738/773  defeat_rate=0.9547
+    D  correct=786/796  defeat_rate=0.9874
+
+  Pairs Won per Question:
+    0 pairs won: 15 questions  [all wrong]
+    1 pairs won: 21 questions  [partial]
+    2 pairs won: 55 questions  [partial]
+    3 pairs won: 910 questions  [all correct]
+
+  Distractor Errors (losses when this letter was distractor):
+    A: 38
+    B: 30
+    C: 35
+    D: 10
+
+[2. FLATTENED BINARY METRICS]
+----------------------------------------------------------------------
+  Each pair -> 2 binary decisions (GT option + distractor option)
+  Total binary decisions                         5948
+  TP                                             2861
+  TN                                             2861
+  FP                                             113
+  FN                                             113
+
+  Binary Accuracy                                0.9620
+  Precision                                      0.9620
+  Recall (Sensitivity)                           0.9620
+  Specificity                                    0.9620
+  F1 Score                                       0.9620
+  Balanced Accuracy                              0.9620
+  MCC                                            0.9240
+  Cohen's Kappa                                  0.9240
+  NPV                                            0.9620
+  False Positive Rate                            0.0380
+  False Negative Rate                            0.0380
+
+  Per-Option-Letter Binary Metrics:
+    A:  Acc=0.9667  Prec=0.9606  Rec=0.9830  Spec=0.9441  F1=0.9717
+    B:  Acc=0.9723  Prec=0.9629  Rec=0.9848  Spec=0.9586  F1=0.9738
+    C:  Acc=0.9643  Prec=0.9480  Rec=0.9755  Spec=0.9547  F1=0.9616
+    D:  Acc=0.9428  Prec=0.9810  Rec=0.8823  Spec=0.9874  F1=0.9290
+
+[3. MCQ RECONSTRUCTION METRICS]
+----------------------------------------------------------------------
+  Strict  = all pairwise comparisons won by GT
+  Relaxed = at least 1 comparison won by GT
+  Total questions                                1001
+  Strict Correct  (all won)                      933
+  Relaxed Correct (>=1 won)                      986
+  Strict Accuracy                                0.9321
+  Relaxed Accuracy                               0.9850
+
+[4. CALIBRATION  (by original MCQ option letter)]
+----------------------------------------------------------------------
+  Letter     As GT  Predicted   GT Rate  Pred Rate  Cal Error
+  A            943        965    0.5810     0.5946     0.0136
+  B            791        809    0.5218     0.5336     0.0119
+  C            654        673    0.4583     0.4716     0.0133
+  D            586        527    0.4240     0.3813     0.0427
+
+[5. REASONING]
+----------------------------------------------------------------------
+  Avg reasoning length (chars)                   566.8648
+  Median reasoning length (chars)                550.0000
+
+[SUMMARY]
+======================================================================
+  Pairwise Accuracy                              0.9620
+  Binary Accuracy                                0.9620
+  Strict MCQ Acc (all won)                       0.9321
+  Relaxed MCQ Acc (>=1 won)                      0.9850
+  F1                                             0.9620
+  MCC                                            0.9240
+  Cohen's Kappa                                  0.9240
+======================================================================

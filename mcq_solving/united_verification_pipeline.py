@@ -58,8 +58,8 @@ def clean_excel_text(value):
     return value
 
 
-# Load dataset
-dataset = load_dataset("UCSC-VLAA/MedReason")
+# Load dataset                                             # CHANGED
+dataset = load_dataset("GBaker/MedQA-USMLE-4-options")
 
 train_data = dataset["train"]
 
@@ -74,7 +74,7 @@ rows = []
 # Output path
 output_file = (
     "MCQ_Verification_Results/"
-    "united_option_verification_results.xlsx"
+    "medqa_united_option_verification_results.xlsx"
 )
 
 # Create directory if missing
@@ -91,47 +91,19 @@ for idx in tqdm(range(1000)):
 
     try:
 
-        dataset_id = sample["id_in_dataset"]
+        dataset_id = idx                                   # CHANGED: no "id_in_dataset" field
 
-        question = sample["question"]
+        question = sample["question"]                      # UNCHANGED
 
-        answer = sample["answer"]
+        answer = sample["answer"]                          # UNCHANGED
 
-        reasoning_gt = sample["reasoning"]
+        reasoning_gt = ""                                  # CHANGED: no "reasoning" field
 
-        raw_options = sample["options"]
+        options_dict = sample["options"]                   # CHANGED: already a dict, no parsing needed
 
-        # Parse options string
-        options_dict = parse_options(raw_options)
+        options = list(options_dict.values())              # CHANGED: derived from dict
 
-        options = [
-            options_dict.get("A", ""),
-            options_dict.get("B", ""),
-            options_dict.get("C", ""),
-            options_dict.get("D", "")
-        ]
-
-        # Find ground truth answer letter
-        ground_truth_answer_letter = ""
-
-        answer_clean = answer.lower()
-
-        if "explanation:" in answer_clean:
-            answer_clean = answer_clean.split("explanation:")[0]
-
-        answer_clean = answer_clean.strip().rstrip(".")
-
-        for key, value in options_dict.items():
-
-            option_clean = value.lower().strip().rstrip(".")
-
-            if (
-                option_clean in answer_clean
-                or answer_clean in option_clean
-            ):
-
-                ground_truth_answer_letter = key
-                break
+        ground_truth_answer_letter = sample["answer_idx"] # CHANGED: directly available
 
         # Run model
         response = verifier.solve_mcq(
@@ -232,10 +204,7 @@ for idx in tqdm(range(1000)):
 
         rows.append({
 
-            "id_in_dataset": sample.get(
-                "id_in_dataset",
-                "unknown"
-            ),
+            "id_in_dataset": idx,                          # CHANGED: use idx consistently
 
             "error": str(e)
         })

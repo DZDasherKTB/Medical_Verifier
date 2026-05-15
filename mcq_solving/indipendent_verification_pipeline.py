@@ -100,8 +100,8 @@ def clean_excel_text(value):
     return value
 
 
-# Load dataset
-dataset = load_dataset("UCSC-VLAA/MedReason")
+# Load dataset                                             # CHANGED
+dataset = load_dataset("GBaker/MedQA-USMLE-4-options")
 
 train_data = dataset["train"]
 
@@ -116,7 +116,7 @@ rows = []
 # Output path
 output_file = (
     "MCQ_Verification_Results/"
-    "indipendent_option_verification_results.xlsx"
+    "medqa_solo_option_verification_results.xlsx"
 )
 
 # Create directory if missing
@@ -133,21 +133,15 @@ for idx in tqdm(range(1000)):
 
     try:
 
-        dataset_id = sample["id_in_dataset"]
+        dataset_id = idx                                   # CHANGED: no "id_in_dataset" field
 
-        question = sample["question"]
+        question = sample["question"]                      # UNCHANGED
 
-        raw_options = sample["options"]
+        options_dict = sample["options"]                   # CHANGED: already a dict, no parsing needed
 
-        # Parse options
-        options_dict = parse_options(raw_options)
+        ground_truth_answer_letter = sample["answer_idx"] # CHANGED: directly available
 
-        ground_truth_answer_letter = find_correct_letter(
-            sample["answer"],
-            options_dict
-        )
-
-        ground_truth_reasoning = sample["reasoning"]
+        ground_truth_reasoning = ""                        # CHANGED: no "reasoning" field
 
         # Store per-option outputs
         option_outputs = {}
@@ -282,10 +276,7 @@ for idx in tqdm(range(1000)):
 
         rows.append({
 
-            "id_in_dataset": sample.get(
-                "id_in_dataset",
-                "unknown"
-            ),
+            "id_in_dataset": idx,                          # CHANGED: use idx consistently
 
             "error": str(e)
         })

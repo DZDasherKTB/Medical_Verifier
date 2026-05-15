@@ -1,0 +1,93 @@
+
+======================================================================
+  SOLO / INDEPENDENT OPTION EVALUATION REPORT
+======================================================================
+
+[DATASET]
+----------------------------------------------------------------------
+  Input file                                 ./MCQ_Verification_Results/indipendent_option_verification_results.xlsx
+  Total rows (raw)                           1000
+  Error rows (API failure)                   16
+  Incomplete label rows                      0
+  Valid rows                                 984
+  Total questions                            984
+  Total verifier decisions                   3936
+  Error breakdown:
+    Connection error.: 16
+
+[1. FLATTENED BINARY METRICS]
+----------------------------------------------------------------------
+  TP                                         885
+  TN                                         2640
+  FP                                         312
+  FN                                         99
+
+  Binary Accuracy                            0.8956
+  Precision                                  0.7393
+  Recall (Sensitivity)                       0.8994
+  Specificity                                0.8943
+  F1 Score                                   0.8116
+  Balanced Accuracy                          0.8968
+  MCC                                        0.7471
+  Cohen's Kappa                              0.7403
+  NPV                                        0.9639
+  False Positive Rate                        0.1057
+  False Negative Rate                        0.1006
+
+  Per-Letter Metrics (A/B/C/D):
+    A: Acc=0.8953  Prec=0.8022  Rec=0.9080  F1=0.8518  Spec=0.8891
+    B: Acc=0.8872  Prec=0.7267  Rec=0.9105  F1=0.8083  Spec=0.8790
+    C: Acc=0.8882  Prec=0.6821  Rec=0.9009  F1=0.7764  Spec=0.8847
+    D: Acc=0.9116  Prec=0.7257  Rec=0.8677  F1=0.7904  Spec=0.9220
+
+[2. MCQ RECONSTRUCTION METRICS]
+----------------------------------------------------------------------
+  Strict Accuracy                            0.7165
+  Relaxed Accuracy                           0.8994
+  Full Q Accuracy (all 4)                    0.7165
+  Strict Correct                             705
+  Relaxed Correct                            885
+  None Predictions                           57
+  Multi-YES                                  202
+
+  YES Distribution (n predicted YES per question):
+    0 YES: 57
+    1 YES: 725
+    2 YES: 145
+    3 YES: 46
+    4 YES: 11
+
+  Prediction Type:
+    MULTI_2: 145
+    MULTI_3: 46
+    MULTI_4: 11
+    NONE: 57
+    SINGLE: 725
+
+[3. CALIBRATION (predicted YES rate vs GT YES rate)]
+----------------------------------------------------------------------
+  Letter     Pred YES   GT YES  Pred Rate  GT Rate  Cal Error
+  A               369      326     0.3750   0.3313     0.0437
+  B               322      257     0.3272   0.2612     0.0661
+  C               280      212     0.2846   0.2154     0.0691
+  D               226      189     0.2297   0.1921     0.0376
+
+[4. GROUND TRUTH DISTRIBUTION]
+----------------------------------------------------------------------
+    A: 326
+    B: 257
+    C: 212
+    D: 189
+
+[SUMMARY]
+======================================================================
+  Binary Accuracy                            0.8956
+  Strict MCQ Acc                             0.7165
+  Relaxed MCQ Acc                            0.8994
+  Full-Q Accuracy                            0.7165
+  F1                                         0.8116
+  MCC                                        0.7471
+  Cohen's Kappa                              0.7403
+  None Predictions                           57
+  Multi-YES                                  202
+======================================================================
